@@ -1,0 +1,69 @@
+﻿@page "/ml-ohebne"
+
+<PageTitle>Ohebná slovní druhy</PageTitle>
+
+<section>
+    <h1 class="verybig">Ohebné slovní druhy</h1>
+    <ul class="grid">
+        <li class="grid-item">
+            <h3>Podstatná jména</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button2" onclick="openPodsJmena()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Přídavná jména</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openPridJmena()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Zájmena</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openZajmena()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Číslovky</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openCislovky()">Otevřít</button>
+            </div>
+        </li>
+        <li class="item">
+            <h3></h3>
+        </li>
+        <li class="grid-item">
+            <h3>Slovesa</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openSlovesa()">Otevřít</button>
+            </div>
+        </li>
+
+    </ul>
+</section>
+
+<script>
+    function openPodsJmena() {
+        window.location.href = "ml-pods-jmena";
+    }
+</script>
+<script>
+    function openPridJmena() {
+        window.location.href = "ml-prid-jmena";
+    }
+</script>
+<script>
+    function openZajmena() {
+        window.location.href = "ml-zajmena";
+    }
+</script>
+<script>
+    function openCislovky() {
+        window.location.href = "ml-cislovky.html";
+    }
+</script>
+<script>
+    function openSlovesa() {
+        window.location.href = "ml-slovesa.html";
+    }
+</script>

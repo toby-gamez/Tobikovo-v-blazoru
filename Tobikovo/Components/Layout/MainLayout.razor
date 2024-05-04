@@ -1,0 +1,60 @@
+﻿@inherits LayoutComponentBase
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
+        <article >
+
+            @Body
+        </article>
+    </main>
+
+
+</div>
+
+
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <a href="about"><img src="images/white-logo.png" alt="Tobikovo Logo" width="100px"></a>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var loadingBarContainer = document.querySelector('.loading-bar-container');
+        var loadingBar = document.querySelector('.loading-bar');
+
+        // Funkce pro zobrazení loading baru s postupně narůstající šířkou
+        function showLoadingBar() {
+            loadingBar.style.width = '100%';
+        }
+
+        // Po dokončení animace loading baru skryje celý container
+        function hideLoadingContainer() {
+            loadingBarContainer.style.display = 'none';
+        }
+
+        // Spustí simulaci načítání při načtení stránky
+        simulateLoading();
+
+        // Funkce pro simulaci načítání
+        function simulateLoading() {
+            setTimeout(showLoadingBar, 1000); // Simulace trvání načítání (1 sekunda)
+            setTimeout(hideLoadingContainer, 3000); // Po dokončení animace skryje loading container (3 sekundy)
+        }
+    });
+</script>
+

@@ -1,0 +1,66 @@
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 80px;
+    background-color: #35393f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 0;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #1f1f1f;
+}
+
+@media screen and (max-width: 600px) {
+
+    /* Zobrazení navigačního menu na menších zařízeních */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #35393f;
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Přidání třídy pro animaci zobrazení menu */
+    .navbar.open {
+        transform: translateY(0);
+    }
+
+    /* Přidání třídy pro skrytí menu */
+    .navbar.closed {
+        transform: translateY(-100%);
+    }
+
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar a:hover {
+        background-color: #555;
+    }
+}

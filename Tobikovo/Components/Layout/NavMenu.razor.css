@@ -1,0 +1,82 @@
+p,
+a,
+span,
+button,
+li,
+ul,
+#myNavbar a {
+    font-family: 'Outfit', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+    nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 80px;
+    background-color: #35393f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        transition: background-color 0.3s ease;
+    }
+
+        nav a:hover {
+            background-color: #1f1f1f;
+        }
+
+@media screen and (max-width: 600px) {
+
+    /* Zobrazení navigaèního menu na menších zaøízeních */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #35393f;
+        z-index: 1000;
+        transition: transform 0.3s ease-in-out;
+    }
+
+        /* Pøidání tøídy pro animaci zobrazení menu */
+        .navbar.open {
+            transform: translateY(0);
+        }
+
+        /* Pøidání tøídy pro skrytí menu */
+        .navbar.closed {
+            transform: translateY(-100%);
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 0;
+            width: 100%;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+            .navbar a:hover {
+                background-color: #555;
+            }
+}

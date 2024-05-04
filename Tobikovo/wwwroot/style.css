@@ -1,0 +1,162 @@
+/* Stránka */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+p,
+span,
+button,
+li,
+ul,
+#myNavbar a {
+    font-family: 'Outfit', sans-serif;
+}
+h1,
+h2,
+h3 {
+    font-family: 'Roboto Mono', monospace;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin-bottom: 75px;
+}
+
+    hr {
+        color: white;
+    }
+
+    @media screen and (max-width: 600px) {
+        hr {
+            color: white;
+            width: 290px;
+        }
+    }
+
+    .grid .subtitle {
+        font-size: 13px;
+        font-family: 'Outfit', sans-serif;
+    }
+
+    main {
+        margin-left: 80px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Změny pro grid a jiné prvky */
+    section {
+        width: 80%;
+        max-width: 800px;
+        text-align: center;
+        margin: auto;
+        padding: 20px;
+        flex-grow: 1;
+        /* Umožňuje, aby se tato část roztahovala */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Vycentrování obsahu pod sebou */
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        h1 {
+            font-size: 25px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    a {
+        color: #2d7bd4;
+    }
+
+    /* Styly pro loading bar */
+    .loading-bar-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: transparent;
+        z-index: 9999;
+        overflow: hidden;
+    }
+
+    .loading-bar {
+        height: 5px;
+        /* Nastavte výšku podle potřeby */
+        width: 0;
+        background-color: #ffffff;
+        /* Modrá barva */
+        transition: width 2s ease;
+        /* Plynulý přechod */
+    }
+
+    .verybig {
+        font-size: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .verybig {
+            font-size: 40px;
+        }
+    }
+
+    .underlined {
+        text-decoration: underline;
+    }
+
+    .rounded {
+        border-radius: 10%;
+        padding: 1%;
+    }
+
+    .blog-image {
+        float: right;
+    }
+
+    /* Tlačítka */
+
+    button {
+        position: relative;
+        overflow: hidden;
+        background-color: #ffffff;
+        color: black;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        button:hover {
+            background-color: #ebebeb;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+    .button:disabled {
+        cursor: not-allowed;
+        /* Další styly pro zobrazení disabled tlačítka, např. změna barvy pozadí nebo textu */
+        opacity: 0.5;
+        /* Příklad: Změna průhlednosti pro naznačení, že je tlačítko disabled */
+    }
+

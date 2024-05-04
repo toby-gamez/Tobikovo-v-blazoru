@@ -1,0 +1,46 @@
+﻿@page "/mluvnice"
+@rendermode InteractiveServer
+
+<PageTitle>Mluvnice</PageTitle>
+
+<section>
+    <h1 class="verybig">Mluvnice</h1>
+    <ul class="grid">
+        <li class="grid-item">
+            <h3>Ohebné slovní druhy</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button2" onclick="openOhebne()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Neohebné slovní druhy</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button2" onclick="openNeohebne()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Ostatní</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openOstatni()">Otevřít</button>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<script>
+    function openOhebne() {
+        window.location.href = "ml-ohebne";
+    }
+</script>
+<script>
+    function openNeohebne() {
+        window.location.href = "ml-neohebne.html"
+    }
+</script>
+<script>
+    function openOstatni() {
+        window.location.href = "ml-ostatni.html"
+    }
+</script>
+
+

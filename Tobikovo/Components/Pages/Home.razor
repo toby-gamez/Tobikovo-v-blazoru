@@ -1,0 +1,66 @@
+﻿@page "/"
+
+<PageTitle>Domů</PageTitle>
+
+<section id="#ucivo">
+    <h1 class="verybig">Tobikovo</h1>
+    <h1>Učivo</h1>
+
+    <ul class="grid">
+        <li class="grid-item">
+            <h3>Mluvnice</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openMluvnice()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Literatura</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openLiteratura()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Sloh</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openSloh()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3><em>Hudební výchova</em></h3>
+            <div class="grid-content">
+                <button type="button" disabled class="ripple-button2" onclick="openHudebka()">Otevřít</button>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<!-- Changelog -->
+<section id="#changelog">
+    <h1>Changelog</h1>
+    <p>Dobře, nebudu to protahovat, zde je:</p>
+    <button class="button" onclick="openChangeLog()">Otevřít</button>
+
+</section>
+
+<script>
+    function openMluvnice() {
+        window.location.href = "mluvnice";
+    }
+</script>
+<script>
+    function openLiteratura() {
+        window.location.href = "literatura";
+    }
+</script>
+<script>
+    function openSloh() {
+        window.location.href = "sloh";
+    }
+</script>
+<script>
+    function openChangeLog() {
+        window.location.href = "changelog.html";
+    }
+</script>
+
+
