@@ -1,0 +1,65 @@
+﻿@page "/ml-neohebne"
+
+<PageTitle>Neohebné slovní druhy</PageTitle>
+
+<section>
+    <h1 class="verybig">Neohebné slovní druhy</h1>
+    <ul class="grid">
+        <li class="grid-item">
+            <h3>Příslovce</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openPrislovce()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Předložky</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openPredlozky()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Spojky</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openSpojky()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Částice</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openCastice()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Citoslovce</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openCitoslovce()">Otevřít</button>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<script>
+    function openPrislovce() {
+        window.location.href = "ml-prislovce";
+    }
+</script>
+<script>
+    function openPredlozky() {
+        window.location.href = "ml-predlozky"
+    }
+</script>
+<script>
+    function openSpojky() {
+        window.location.href = "ml-spojky"
+    }
+</script>
+<script>
+    function openCastice() {
+        window.location.href = "ml-castice"
+    }
+</script>
+<script>
+    function openCitoslovce() {
+        window.location.href = "ml-citoslovce"
+    }
+</script>

@@ -1,0 +1,34 @@
+﻿@page "/ml-prislovce"
+
+<PageTitle>Příslovce</PageTitle>
+
+<section>
+    <h1 class="verybig">Příslovce</h1>
+    <ul class="grid">
+        <li class="item">
+        </li>
+        <li class="grid-item">
+            <h3>Základy</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openZaklady()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Stupňování</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openStupnovani()">Otevřít</button>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<script>
+    function openZaklady() {
+        window.location.href = "ml-zaklady-pris"
+    }
+</script>
+<script>
+    function openStupnovani() {
+        window.location.href = "ml-stupnovani-pris"
+    }
+</script>

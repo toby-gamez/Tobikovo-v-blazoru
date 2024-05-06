@@ -1,0 +1,34 @@
+﻿@page "/ml-zajmena"
+
+<PageTitle>Zájmena</PageTitle>
+
+<section>
+    <h1 class="verybig">Zájmena</h1>
+    <ul class="grid">
+        <li class="item">
+        </li>
+        <li class="grid-item">
+            <h3>Druhy a zájmena</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button2" onclick="openDruhy()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Zájmeno jenž</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openJenz()">Otevřít</button>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<script>
+    function openDruhy() {
+        window.location.href = "ml-druhy-zajmen";
+    }
+</script>
+<script>
+    function openJenz() {
+        window.location.href = "ml-zaj-jenz";
+    }
+</script>
