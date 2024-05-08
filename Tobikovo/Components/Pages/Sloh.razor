@@ -2,5 +2,53 @@
 
 <PageTitle>Sloh</PageTitle>
 
-<h1>Weather</h1>
+<section>
+    <h1 class="verybig">Sloh</h1>
+    <ul class="grid">
+        <li class="grid-item">
+            <h3>Popis uměleckého díla</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button3" onclick="openPopis()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Líčení</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openLiceni()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Charakteristika</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openCharakteristika()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Žádost</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openZadost()">Otevřít</button>
+            </div>
+        </li>
+    </ul>
+</section>
 
+<script>
+    function openPopis() {
+        window.location.href = "sl-popis"
+    }
+</script>
+<script>
+    function openLiceni() {
+        window.location.href = "sl-liceni"
+    }
+</script>
+<script>
+    function openCharakteristika() {
+        window.location.href = "sl-charakteristika"
+    }
+</script>
+<script>
+    function openZadost() {
+        window.location.href = "sl-zadost"
+    }
+</script>
