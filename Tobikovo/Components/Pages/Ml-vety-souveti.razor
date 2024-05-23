@@ -1,0 +1,33 @@
+﻿@page "/ml-vety-souveti"
+
+<PageTitle>Věty a souvětí</PageTitle>
+
+<section>
+    <h1 class="verybig">Věty a souvětí</h1>
+    <ul class="grid">
+        <li class="grid-item">
+            <h3>Věty a v. ekvivalenty</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button2" onclick="openVetyVE()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Souvětí</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openSouveti()">Otevřít</button>
+            </div>
+        </li>
+    </ul>
+</section>
+
+
+<script>
+    function openVetyVE() {
+        window.location.href = "ml-vety-ve";
+    }
+</script>
+<script>
+    function openSouveti() {
+        window.location.href = "ml-souveti";
+    }
+</script>
