@@ -12,18 +12,18 @@ nav {
 }
 
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 15px 0;
-    width: 100%;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 0;
+        width: 100%;
+        text-align: center;
+        transition: background-color 0.3s ease;
+    }
 
-nav a:hover {
-    background-color: #1f1f1f;
-}
+        nav a:hover {
+            background-color: #1f1f1f;
+        }
 
 @media screen and (max-width: 600px) {
 
@@ -41,26 +41,26 @@ nav a:hover {
         transition: transform 0.3s ease-in-out;
     }
 
-    /* Přidání třídy pro animaci zobrazení menu */
-    .navbar.open {
-        transform: translateY(0);
-    }
+        /* Přidání třídy pro animaci zobrazení menu */
+        .navbar.open {
+            transform: translateY(0);
+        }
 
-    /* Přidání třídy pro skrytí menu */
-    .navbar.closed {
-        transform: translateY(-100%);
-    }
+        /* Přidání třídy pro skrytí menu */
+        .navbar.closed {
+            transform: translateY(-100%);
+        }
 
-    .navbar a {
-        color: #fff;
-        text-decoration: none;
-        padding: 15px 0;
-        width: 100%;
-        text-align: center;
-        transition: background-color 0.3s ease;
-    }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 0;
+            width: 100%;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
 
-    .navbar a:hover {
-        background-color: #555;
-    }
+            .navbar a:hover {
+                background-color: #555;
+            }
 }

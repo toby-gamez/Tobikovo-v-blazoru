@@ -10,10 +10,10 @@ ul,
 #myNavbar a {
     font-family: 'Outfit', sans-serif;
 }
+
 h1,
 h2,
-h3,
-h4 {
+h3 {
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -25,139 +25,145 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    margin-bottom: 75px;
+    /* Umožňuje vertikální rozložení */
 }
 
+hr {
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
     hr {
         color: white;
+        width: 290px;
     }
+}
 
-    @media screen and (max-width: 600px) {
-        hr {
-            color: white;
-            width: 290px;
-        }
-    }
+.grid .subtitle {
+    font-size: 13px;
+    font-family: 'Outfit', sans-serif;
+}
 
-    .grid .subtitle {
-        font-size: 13px;
-        font-family: 'Outfit', sans-serif;
-    }
+main {
+    margin-left: 80px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-    main {
-        margin-left: 80px;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+/* Změny pro grid a jiné prvky */
+section {
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    flex-grow: 1;
+    /* Umožňuje, aby se tato část roztahovala */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Vycentrování obsahu pod sebou */
+}
 
-    /* Změny pro grid a jiné prvky */
-    section {
-        width: 80%;
-        max-width: 800px;
-        text-align: center;
-        margin: auto;
-        padding: 20px;
-        flex-grow: 1;
-        /* Umožňuje, aby se tato část roztahovala */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /* Vycentrování obsahu pod sebou */
-    }
+h1 {
+    font-size: 32px;
+}
 
+@media only screen and (max-width: 600px) {
     h1 {
-        font-size: 32px;
+        font-size: 25px;
     }
 
-    @media only screen and (max-width: 600px) {
-        h1 {
-            font-size: 25px;
-        }
-
-        h2 {
-            font-size: 20px;
-        }
+    h2 {
+        font-size: 20px;
     }
+}
 
-    a {
-        color: #2d7bd4;
-    }
+a {
+    color: #2d7bd4;
+}
 
-    /* Styly pro loading bar */
-    .loading-bar-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 5px;
-        background-color: transparent;
-        z-index: 9999;
-        overflow: hidden;
-    }
+/* Styly pro loading bar */
+.loading-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+    z-index: 9999;
+    overflow: hidden;
+}
 
-    .loading-bar {
-        height: 5px;
-        /* Nastavte výšku podle potřeby */
-        width: 0;
-        background-color: #ffffff;
-        /* Modrá barva */
-        transition: width 2s ease;
-        /* Plynulý přechod */
-    }
+.loading-bar {
+    height: 5px;
+    /* Nastavte výšku podle potřeby */
+    width: 0;
+    background-color: #ffffff;
+    /* Modrá barva */
+    transition: width 2s ease;
+    /* Plynulý přechod */
+}
 
+.verybig {
+    font-size: 60px;
+}
+
+@media only screen and (max-width: 600px) {
     .verybig {
-        font-size: 60px;
+        font-size: 40px;
     }
+}
 
-    @media only screen and (max-width: 600px) {
-        .verybig {
-            font-size: 40px;
-        }
-    }
+.underlined {
+    text-decoration: underline;
+}
 
-    .underlined {
-        text-decoration: underline;
-    }
+.rounded {
+    border-radius: 10%;
+    padding: 1%;
+}
 
-    .rounded {
-        border-radius: 10%;
-        padding: 1%;
-    }
+.blog-image {
+    float: right;
+}
 
-    .blog-image {
-        float: right;
-    }
+/* Tlačítka */
 
-    /* Tlačítka */
+button {
+    border-radius: 16px;
+    border: solid 3px white;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+}
 
-    button {
-        position: relative;
-        overflow: hidden;
-        background-color: #ffffff;
-        color: black;
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
+.spark {
+    position: absolute;
+    width: 30px;
+    height: 8px;
+    border-radius: 3px;
+    background-color: white;
+    transform: none;
+}
 
-        button:hover {
-            background-color: #ebebeb;
-        }
+button:hover {
+    background-color: #616161;
+}
 
-        button:active {
-            transform: scale(0.95);
-        }
+button:active {
+    transform: scale(0.95);
+}
 
-    .button:disabled {
-        cursor: not-allowed;
-        /* Další styly pro zobrazení disabled tlačítka, např. změna barvy pozadí nebo textu */
-        opacity: 0.5;
-        /* Příklad: Změna průhlednosti pro naznačení, že je tlačítko disabled */
-    }
-
+.button:disabled {
+    cursor: not-allowed;
+    /* Další styly pro zobrazení disabled tlačítka, např. změna barvy pozadí nebo textu */
+    opacity: 0.5;
+    /* Příklad: Změna průhlednosti pro naznačení, že je tlačítko disabled */
+}

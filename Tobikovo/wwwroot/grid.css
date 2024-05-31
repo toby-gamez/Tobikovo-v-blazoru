@@ -20,6 +20,7 @@
     height: 150px;
     /* Výška prvku */
 }
+
 @media only screen and (max-width: 600px) {
     .grid-item {
         background-color: #333;
@@ -37,12 +38,14 @@
     opacity: 0.5;
     /* Příklad: Změna průhlednosti pro naznačení, že je tlačítko disabled */
 }
+
 .ripple-button2:disabled {
     cursor: not-allowed;
     /* Další styly pro zobrazení disabled tlačítka, např. změna barvy pozadí nebo textu */
     opacity: 0.5;
     /* Příklad: Změna průhlednosti pro naznačení, že je tlačítko disabled */
 }
+
 .ripple-button3:disabled {
     cursor: not-allowed;
     /* Další styly pro zobrazení disabled tlačítka, např. změna barvy pozadí nebo textu */
@@ -55,11 +58,11 @@
 }
 
 .ripple-button2 {
-    margin-top: 25%;
+    margin-top: 23%;
 }
 
 .ripple-button3 {
-    margin-top: 10%;
+    margin-top: 6%;
 }
 
 
@@ -71,6 +74,7 @@
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
 @media screen and (max-width: 600px) {
     .grid {
         grid-template-columns: 1fr;
@@ -85,5 +89,4 @@
         justify-content: center;
         align-items: center;
     }
-    
 }

@@ -41,7 +41,12 @@
                 <button type="button" class="ripple-button2" onclick="openPatyPad()">Otevřít</button>
             </div>
         </li>
-
+        <li class="grid-item">
+            <h3>Podmět</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openPodmet()">Otevřít</button>
+            </div>
+        </li>
         <li class="grid-item">
             <h3>Skloňování lidských částí těla</h3>
             <div class="grid-content">
@@ -58,6 +63,12 @@
             <h3>Skupiny souhlásek</h3>
             <div class="grid-content">
                 <button type="button" class="ripple-button2" onclick="openSkupiny()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Shoda přísudku s podmětem</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button2" onclick="openShoda()">Otevřít</button>
             </div>
         </li>
     </ul>
@@ -94,6 +105,11 @@
     }
 </script>
 <script>
+    function openPodmet() {
+        window.location.href = "ml-podmet";
+    }
+</script>
+<script>
     function openLidskeCasti() {
         window.location.href = "ml-sklonovani-lids-casti-tela";
     }
@@ -106,5 +122,10 @@
 <script>
     function openSkupiny() {
         window.location.href = "ml-skupiny-souhl";
+    }
+</script>
+<script>
+    function openShoda() {
+        window.location.href = "ml-shoda-prisudku-s-podmetem";
     }
 </script>
