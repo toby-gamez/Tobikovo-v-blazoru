@@ -1,6 +1,7 @@
 /* Stránka */
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
 
 p,
 span,
@@ -14,7 +15,7 @@ ul,
 h1,
 h2,
 h3 {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Noto Sans Mono', monospace;
 }
 
 body {

@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <Content Remove="Components\Pages\Ml-shoda-prisudku-s-podmetem.razor" />
+    <Content Remove="Components\Pages\PageTitle.razor" />
     <Content Remove="wwwroot\Buttons.js" />
   </ItemGroup>
 
@@ -21,11 +22,17 @@
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="Components\Pages\Ml-shoda-prisudku-s-podmetem.razor" />
+    <_ContentIncludedByDefault Remove="Components\Pages\PageTitle.razor" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="Components\Pages\Ml-shoda-prisudku-s-podmetem.razor" />
+    <None Include="Components\Pages\PageTitle.razor" />
     <None Include="wwwroot\Buttons.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Components\Pages\PageTitle.razor" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,37 @@
+﻿@page "/kalendar"
+
+<PageTitle>Kalendář na písemné práce</PageTitle>
+
+<section>
+    <h1 class="verybig">Kalendář na pís. práce</h1>
+    <div style="text-align: left;">
+        <h2>Matematika</h2>
+        <h3>Datum: 17. 6. 2024</h3>
+        <h3>Obsah</h3>
+        <ul>
+            <li>trojčlenka</li>
+            <li>procenta</li>
+        </ul>
+        <button style="float: right;" onclick="addCalendarEvent()">Přidat do kalendáře</button>
+        <p></p>
+        <hr width="700px" />
+
+    </div>
+</section>
+
+<script>
+    function addCalendarEvent() {
+        // Parametry pro Google Calendar událost
+        const title = encodeURIComponent("Písemná práce z matematiky");
+        const description = encodeURIComponent("trojčlenka, procenta");
+        const startDate = "20240417";
+        const endDate = "20240418";
+        const location = ""; // volitelné
+
+        // Vytvoření URL pro Google Calendar
+        const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${description}&location=${location}&trp=false&sprop=&sprop=name:`;
+
+        // Otevření URL v novém okně
+        window.open(googleCalendarUrl, '_blank');
+    }
+</script>
