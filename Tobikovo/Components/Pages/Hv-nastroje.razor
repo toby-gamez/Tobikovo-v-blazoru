@@ -1,0 +1,32 @@
+﻿@page "/hv-nastroje"
+
+<PageTitle>Nástoje</PageTitle>
+
+<section>
+    <h1 class="verybig">Hudební nástroje</h1>
+    <ul class="grid">
+        <li class="grid-item">
+            <h3>Orchestrální</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openOrchestralni()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Lidové</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openLidove()">Otevřít</button>
+            </div>
+        </li>
+    </ul>
+</section>
+
+    <script>
+        function openOrchestralni() {
+            window.location.href = "hv-orchestralni"
+        }
+    </script>
+    <script>
+        function openLidove() {
+            window.location.href = "hv-lidove"
+        }
+    </script>

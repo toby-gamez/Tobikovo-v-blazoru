@@ -1,0 +1,54 @@
+﻿@page "/hv-predstavitele"
+
+<PageTitle>Představitelé</PageTitle>
+
+<section>
+    <h1 style="font-size: 45px;">Představitelé</h1>
+    <ul class="grid">
+        <li class="grid-item">
+            <h3>Bedřich Smetana</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button2" onclick="openSmetana()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Antonín Dvořák</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button2" onclick="openDvorak()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Fryderyk Chopin</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button2" onclick="openChopin()">Otevřít</button>
+            </div>
+        </li>
+        <li class="grid-item">
+            <h3>Leoš Janáček</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openJanacek()">Otevřít</button>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<script>
+    function openSmetana() {
+        window.location.href = "hv-smetana"
+    }
+</script>
+<script>
+    function openDvorak() {
+        window.location.href = "hv-dvorak"
+    }
+</script>
+<script>
+    function openChopin() {
+        window.location.href = "hv-chopin"
+    }
+</script>
+<script>
+    function openJanacek() {
+        window.location.href = "hv-janacek"
+    }
+</script>
