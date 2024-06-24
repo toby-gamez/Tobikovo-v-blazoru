@@ -1,0 +1,60 @@
+﻿@page "/m-cela-cisla"
+
+<PageTitle>Celá čísla</PageTitle>
+
+<section>
+    <h1 class="verybig">Celá čísla</h1>
+    <ul class="grid">
+        <a href="m-delitelnost">
+        <li class="grid-item">
+            <h3>Dělitelnost</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openDelitelnost()">
+                    Otevřít
+                </button>
+            </div>
+        </li></a>
+        <a href="m-rozklad">
+        <li class="grid-item">
+            <h3>Rozklad na prvočísla</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button2" onclick="openRozklad()">
+                    Otevřít
+                </button>
+            </div>
+        </li></a>
+        <a href="m-nsn">
+        <li class="grid-item">
+            <h3>Nejmenší společný násobek</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button3" onclick="openNSN()">
+                    Otevřít
+                </button>
+            </div>
+        </li></a>
+        <a href="m-nsd">
+        <li class="grid-item">
+            <h3>Největší společný dělitel</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button3" onclick="openNSD()">
+                    Otevřít
+                </button>
+            </div>
+        </li></a>
+    </ul>
+</section>
+
+<script>
+    function openDelitelnost() {
+        window.location.href = "m-delitelnost";
+    }
+    function openRozklad() {
+        window.location.href = "m-rozklad";
+    }
+    function openNSD() {
+        window.location.href = "m-nsd";
+    }
+    function openNSN() {
+        window.location.href = "m-nsn";
+    }
+</script>

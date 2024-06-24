@@ -1,5 +1,11 @@
 ﻿@inherits LayoutComponentBase
+<head>
+    <link  rel="stylesheet" href="~/nav.css"/>
 
+    <style>
+        
+    </style>
+</head>
 <div class="page">
     <div class="sidebar">
         <NavMenu />
@@ -10,6 +16,17 @@
             <div class="loading-bar"></div>
         </div>
         <article >
+                <div class="mobile-nav">
+                <p><a class="mobile-nav" href="">Domů</a></p>
+                <hr class="mobile-nav">
+                <p><a class="mobile-nav" href="mluvnice">Mluvnice</a></p>
+                <p><a class="mobile-nav" href="literatura">Literatura</a></p>
+                <p><a class="mobile-nav" href="sloh">Sloh</a></p>
+                <p><a class="mobile-nav" href="hudebka">Hudební výchova</a></p>
+                <p><a class="mobile-nav" href="matematika">Matematika</a></p>
+                <hr class="mobile-nav">
+                <p><a class="mobile-nav" href="about">O mně</a></p>
+            </div>
             @Body
             <br />
             <br />
@@ -36,33 +53,25 @@
 </footer>
 
 <script>
+    // bar
     document.addEventListener('DOMContentLoaded', function () {
-        var loadingBarContainer = document.querySelector('.loading-bar-container');
         var loadingBar = document.querySelector('.loading-bar');
 
-        // Funkce pro zobrazení loading baru s postupně narůstající šířkou
-        function showLoadingBar() {
-            loadingBar.style.width = '100%';
+        // Funkce pro aktualizaci šířky loading baru podle pozice scrollování
+        function updateLoadingBar() {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+            var clientHeight = document.documentElement.clientHeight;
+            var scrollPercent = (scrollTop / (scrollHeight - clientHeight)) * 100;
+            loadingBar.style.width = scrollPercent + '%';
         }
 
-        // Po dokončení animace loading baru skryje celý container
-        function hideLoadingContainer() {
-            loadingBarContainer.style.display = 'none';
-        }
+        // Aktualizace loading baru při scrollování
+        window.addEventListener('scroll', updateLoadingBar);
 
-        // Spustí simulaci načítání při načtení stránky
-        simulateLoading();
-
-        // Funkce pro simulaci načítání
-        function simulateLoading() {
-            setTimeout(showLoadingBar, 1000); // Simulace trvání načítání (1 sekunda)
-            setTimeout(hideLoadingContainer, 3000); // Po dokončení animace skryje loading container (3 sekundy)
-        }
+        // Prvotní nastavení při načtení stránky
+        updateLoadingBar();
     });
-
-
-
-
 </script>
 <script src="Buttons.js"></script>
 

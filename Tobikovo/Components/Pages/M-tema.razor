@@ -1,0 +1,52 @@
+﻿@page "/m-tema"
+
+<PageTitle>Společná témata</PageTitle>
+
+<section>
+    <h1 class="verybig">Společná témata</h1>
+    <ul class="grid">
+        <a href="m-zaokrouhlovani">
+        <li class="grid-item">
+            <h3>Zaokrouhlování</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openZaokrouhlovani()">
+                    Otevřít
+                </button>
+            </div>
+        </li></a>
+        <a href="m-prednost">
+        <li class="grid-item">
+            <h3>Přednost matematických operací</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button3" onclick="openPrednost()">
+                    Otevřít
+                </button>
+            </div>
+        </li></a>
+        <a href="m-ari-prumer">
+        <li class="grid-item">
+            <h3>Aritmetický průměr</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button2" onclick="openAriPrumer()">
+                    Otevřít
+                </button>
+            </div>
+        </li></a>
+    </ul>
+</section>
+
+<script>
+    function openZaokrouhlovani() {
+        window.location.href = "m-zaokrouhlovani";
+    }
+</script>
+<script>
+    function openPrednost() {
+        window.location.href = "m-prednost";
+    }
+</script>
+<script>
+    function openAriPrumer() {
+        window.location.href = "m-ari-prumer";
+    }
+</script>

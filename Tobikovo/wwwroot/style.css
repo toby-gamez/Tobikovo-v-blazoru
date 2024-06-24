@@ -14,13 +14,24 @@ ul,
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: 'Noto Sans Mono', monospace;
+}
+
+.verybig {
+    font-size: 60px;
+    margin-top: -160px;
+    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.priklad {
+    font-family: 'Times new Roman';
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #1a1a1a;
+    background-color: #16181b;
     color: #ffffff;
     margin: 0;
     display: flex;
@@ -28,10 +39,72 @@ body {
     flex-direction: column;
     /* Umožňuje vertikální rozložení */
 }
+.mobile-nav a {
+    visibility: hidden;
+    color: white;
+    text-decoration: none;
+    text-align: right;
+    margin-left: 0px;
+}
 
+.mobile-nav hr {
+    visibility: hidden;
+    border-radius: 0px;
+    padding: 0px;
+    margin-left: 0px;
+}
+
+.mobile-nav {
+    margin-left: 0px;
+    margin-right: 0px;
+    visibility: hidden;
+    padding: 0px;
+    border-radius: 0px;
+    margin-top: 0px;
+    width: 0px;
+}
 hr {
     color: white;
 }
+
+.Mcard {
+    background-color: #35393f;
+    /* odpovídá Bootstrap text-bg-secondary */
+    color: #fff;
+    /* textová barva */
+    max-width: 18rem;
+    /* maximální šířka */
+    border: 1px solid #ddd;
+    /* přidání okraje */
+    border-radius: 0.25rem;
+    /* zaoblené rohy */
+}
+
+.Minfo {
+    background-color: #2e3136;
+    /* tmavší šedá pro hlavičku */
+    padding: 0.75rem 1.25rem;
+    /* padding */
+    border-bottom: 1px solid #ddd;
+    /* spodní okraj */
+    border-top-left-radius: 0.25rem;
+    /* zaoblené rohy nahoře */
+    border-top-right-radius: 0.25rem;
+}
+
+.Mtelo {
+    padding: 1rem;
+    /* padding */
+}
+
+.Mnadpis {
+    font-size: 1.25rem;
+    /* velikost písma */
+    margin-bottom: 0.75rem;
+    /* spodní okraj */
+}
+
+
 
 @media screen and (max-width: 600px) {
     hr {
@@ -46,7 +119,7 @@ hr {
 }
 
 main {
-    margin-left: 80px;
+    margin-left: 110px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -81,10 +154,48 @@ h1 {
     h2 {
         font-size: 20px;
     }
+
+    main {
+        margin-left: 0px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile-nav a {
+        visibility: visible;
+        color: white;
+        text-decoration: none;
+        text-align: right;
+        margin-left: 0px;
+    }
+        .mobile-nav a:hover {
+            background-color: #1f1f1f;
+        }
+
+    .mobile-nav hr {
+        visibility: visible;
+        border-radius: 0px;
+        padding: 0px;
+        margin-left: 0px;
+    }
+
+    .mobile-nav {
+        margin-left: 60px;
+        margin-right: 60px;
+        justify-content: center;
+        visibility: visible;
+        background-color: #35393f;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 20px;
+        width: 280px;
+    }
 }
 
 a {
-    color: #2d7bd4;
+    color: #4d8fdb;
 }
 
 /* Styly pro loading bar */
@@ -105,17 +216,17 @@ a {
     width: 0;
     background-color: #ffffff;
     /* Modrá barva */
-    transition: width 2s ease;
+    transition: width 0.2s linear;
     /* Plynulý přechod */
 }
 
-.verybig {
-    font-size: 60px;
-}
+
 
 @media only screen and (max-width: 600px) {
     .verybig {
         font-size: 40px;
+        margin-top: 0px;
+        text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -167,4 +278,40 @@ button:active {
     /* Další styly pro zobrazení disabled tlačítka, např. změna barvy pozadí nebo textu */
     opacity: 0.5;
     /* Příklad: Změna průhlednosti pro naznačení, že je tlačítko disabled */
+}
+.opennav-button {
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+    button {
+        border-radius: 16px;
+        border: solid 3px white;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .nav-button {
+        border-radius: 16px;
+        border: solid 0px black;
+        cursor: pointer;
+        font-size: 300px;
+        outline: none;
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .opennav-button {
+        font-size: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border: 0px solid black;
+        visibility: visible;
+    }
 }

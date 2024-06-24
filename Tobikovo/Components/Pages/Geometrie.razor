@@ -1,0 +1,64 @@
+﻿@page "/geometrie"
+
+<PageTitle>Geometrie</PageTitle>
+
+<section>
+    <h1 class="verybig">Geometrie</h1>
+    <ul class="grid">
+        <a href="geo-uhly">
+        <li class="grid-item">
+            <h3>Úhly</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openUhly()">
+                    Otevřít
+                </button>
+            </div>
+        </li>
+        </a>
+        <a href="geo-abeceda">
+        <li class="grid-item">
+            <h3>Řecká abeceda</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openAbeceda()">
+                    Otevřít
+                </button>
+            </div>
+        </li>
+        </a>
+        <a href="geo-trojuhelnik">
+        <li class="grid-item">
+            <h3>Trojúhelník</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button" onclick="openTroj()">
+                    Otevřít
+                </button>
+            </div>
+        </li>
+        </a>
+        <a href="geo-geom-tvary">
+        <li class="grid-item">
+            <h3>Geometrické tvary</h3>
+            <div class="grid-content">
+                <button type="button" class="ripple-button2" onclick="openGeomTvery()">
+                    Otevřít
+                </button>
+            </div>
+        </li>
+        </a>
+    </ul>
+</section>
+
+<script>
+    function openUhly() {
+        window.location.href = "geo-uhly";
+    }
+    function openAbeceda() {
+        window.location.href = "geo-abeceda";
+    }
+    function openTroj() {
+        window.location.href = "geo-trojuhelnik";
+    }
+    function openGeomTvary() {
+        window.location.href = "geo-geom-tvary";
+    }
+</script>

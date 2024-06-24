@@ -9,7 +9,7 @@
 }
 
 .grid-item {
-    background-color: #333;
+    background-color: #25292e;
     padding: 20px;
     text-align: center;
     margin: 0;
@@ -19,16 +19,33 @@
     /* Šířka prvku */
     height: 150px;
     /* Výška prvku */
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.grid h3 {
+    text-decoration: none;
+    color: white;
+}
+
+.grid button {
+    text-decoration: none;
+    color: white;
+}
+
+.grid a {
+    text-decoration: none;
+    color: white;
 }
 
 @media only screen and (max-width: 600px) {
     .grid-item {
-        background-color: #333;
+        background-color: #2c3036;
         text-align: center;
         border-radius: 10%;
         width: 150px;
         height: 150px;
         font-size: 15px;
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -54,21 +71,22 @@
 }
 
 .ripple-button {
-    margin-top: 40%;
-}
-
-.ripple-button2 {
     margin-top: 23%;
 }
 
+.ripple-button2 {
+    margin-top: 8%;
+}
+
 .ripple-button3 {
-    margin-top: 6%;
+    margin-top: -10%;
 }
 
 
 /* ... (Zde může být další kód pro tlačítka a ripple efekt) */
 
 @media screen and (min-width: 1200px) {
+
     /* Pokud je šířka obrazovky alespoň 1200px, změňte na 4 sloupce */
     .grid {
         grid-template-columns: repeat(4, 1fr);

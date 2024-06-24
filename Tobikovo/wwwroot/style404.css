@@ -10,6 +10,7 @@ ul,
 #myNavbar a {
     font-family: 'Outfit', sans-serif;
 }
+
 h1,
 h2,
 h3 {
@@ -37,8 +38,8 @@ hr {
         color: white;
         width: 290px;
     }
-    
 }
+
 .grid .subtitle {
     font-size: 13px;
     font-family: 'Outfit', sans-serif;
@@ -129,13 +130,13 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #ebebeb;
-}
+    button:hover {
+        background-color: #ebebeb;
+    }
 
-button:active {
-    transform: scale(0.95);
-}
+    button:active {
+        transform: scale(0.95);
+    }
 
 .button:disabled {
     cursor: not-allowed;

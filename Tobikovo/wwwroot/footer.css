@@ -10,5 +10,21 @@ footer {
 }
 
 .footer-content {
-    margin-left: 5.5rem;
+    margin-left: 6.7rem;
+}
+@media only screen and (max-width: 600px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #35393f;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .footer-content {
+        margin-left: 0rem;
+    }
 }
