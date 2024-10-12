@@ -22,9 +22,23 @@
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
 }
 
+
 .grid h3 {
     text-decoration: none;
     color: white;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.grid-h3 {
+    margin-top: 58px;
+    text-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.grid-h3-2 {
+    margin-top: 38px;
+    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 .grid button {

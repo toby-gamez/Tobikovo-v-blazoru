@@ -1,49 +1,31 @@
 ﻿@page "/mluvnice"
-@rendermode InteractiveServer
 
 <PageTitle>Mluvnice</PageTitle>
 
 <section>
     <h1 class="verybig">Mluvnice</h1>
+
     <ul class="grid">
         <a href="ml-ohebne">
         <li class="grid-item">
-            <h3>Ohebné slovní druhy</h3>
+            <h3>OHEBNÉ SLOVNÍ DRUHY</h3>
             <div class="grid-content">
-                <button type="button" class="ripple-button2" onclick="openOhebne()">Otevřít</button>
             </div>
-        </li></a>
+        </li>
+        </a>
         <a href="ml-neohebne">
         <li class="grid-item">
-            <h3>Neohebné slovní druhy</h3>
+            <h3>NEOHEBNÉ SLOVNÍ DRUHY</h3>
             <div class="grid-content">
-                <button type="button" class="ripple-button2" onclick="openNeohebne()">Otevřít</button>
             </div>
-        </li></a>
+        </li>
+        </a>
         <a href="ml-ostatni">
         <li class="grid-item">
-            <h3>Ostatní</h3>
+            <h3 class="grid-h3">OSTATNÍ</h3>
             <div class="grid-content">
-                <button type="button" class="ripple-button" onclick="openOstatni()">Otevřít</button>
             </div>
-        </li></a>
+        </li>
+        </a>
     </ul>
 </section>
-
-<script>
-    function openOhebne() {
-        window.location.href = "ml-ohebne";
-    }
-</script>
-<script>
-    function openNeohebne() {
-        window.location.href = "ml-neohebne"
-    }
-</script>
-<script>
-    function openOstatni() {
-        window.location.href = "ml-ostatni"
-    }
-</script>
-
-

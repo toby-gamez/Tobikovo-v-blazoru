@@ -1,3 +1,8 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+
+
 nav {
     position: fixed;
     left: 0;
@@ -10,6 +15,7 @@ nav {
     align-items: center;
     padding-top: 20px;
 }
+
 .mobile-nav {
     visibility: hidden;
 }
@@ -42,7 +48,7 @@ nav hr {
 @media screen and (max-width: 600px) {
 
     nav {
-        visibility:hidden;
+        visibility: hidden;
     }
 
     .mobile-nav a {
@@ -62,5 +68,4 @@ nav hr {
     .navbar {
         visibility: hidden;
     }
-
 }

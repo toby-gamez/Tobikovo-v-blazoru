@@ -1,18 +1,3 @@
-p,
-a,
-span,
-button,
-li,
-ul,
-#myNavbar a {
-    font-family: 'Outfit', sans-serif;
-}
-
-h1,
-h2,
-h3 {
-    font-family: 'Roboto Mono', monospace;
-}
 
 nav {
     position: fixed;
@@ -27,6 +12,9 @@ nav {
     padding-top: 20px;
 }
 
+.mobile-nav {
+    visibility: hidden;
+}
 
 nav a {
     color: #fff;
@@ -35,6 +23,7 @@ nav a {
     width: 100%;
     text-align: center;
     transition: background-color 0.3s ease;
+    font-family: 'Outfit', sans-serif;
 }
 
     nav a:hover {
@@ -45,10 +34,22 @@ nav hr {
     width: 80px;
 }
 
+.mobile-nav a {
+    visibility: hidden;
+}
+
+.mobile-nav {
+    visibility: hidden;
+}
+
 @media screen and (max-width: 600px) {
 
     nav {
         visibility: hidden;
+    }
+
+    .mobile-nav a {
+        visibility: visible;
     }
 
     .mobile-nav {
@@ -63,12 +64,5 @@ nav hr {
     /* Zobrazení navigaèního menu na menších zaøízeních */
     .navbar {
         visibility: hidden;
-    }
-    .mobile-nav a {
-        visibility: visible;
-    }
-
-    .mobile-nav {
-        visibility: visible;
     }
 }
