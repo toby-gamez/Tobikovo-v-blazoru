@@ -10,7 +10,7 @@ footer {
 }
 
 .footer-content {
-    margin-left: 6.7rem;
+    margin-left: 0;
 }
 @media only screen and (max-width: 600px) {
     footer {
