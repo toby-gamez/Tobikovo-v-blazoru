@@ -1,124 +1,95 @@
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* 3 sloupce */
-    grid-gap: 20px;
-    /* Mezery mezi jednotlivými buňkami gridu */
-    list-style: none;
+    grid-template-columns: repeat(4, 1fr); /* Čtyři sloupce */
+    grid-gap: 20px; /* Mezery mezi položkami */
+    list-style: none; /* Odstranění odrážek */
     padding: 0;
+    margin: 0;
 }
 
 .grid-item {
-    background-color: #25292e;
-    padding: 20px;
-    text-align: center;
-    margin: 0;
-    border-radius: 10%;
-    /* Zaoblené rohy pro vytvoření čtverců */
-    width: 150px;
-    /* Šířka prvku */
-    height: 150px;
-    /* Výška prvku */
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+    width: 180px; /* Šířka položky */
+    height: 180px; /* Výška položky */
+    background-color: #25292e; /* Tmavé pozadí */
+    border-radius: 10%; /* Zaoblení rohů */
+    border: 4px solid transparent; /* Rezervace místa pro rámeček */
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1); /* Jemný stín */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease; /* Animace */
+    overflow: hidden; /* Zajištění, že obsah nepřeteče */
+    position: relative;
 }
 
-
-.grid h3 {
-    text-decoration: none;
-    color: white;
-    font-size: 25px;
-    text-align: center;
-    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+.grid-item a {
+    display: flex; /* Flexbox pro centrování obsahu */
+    justify-content: center; /* Centrovaný text horizontálně */
+    align-items: center; /* Centrovaný text vertikálně */
+    width: 100%; /* Roztažení odkazu na celou šířku položky */
+    height: 100%; /* Roztažení odkazu na celou výšku položky */
+    text-decoration: none; /* Odstranění podtržení */
+    color: white; /* Barva textu */
 }
 
-.grid-h3 {
-    margin-top: 58px;
-    text-shadow: rgba(0, 0, 0, 0.2);
+.grid-item:hover {
+    transform: scale(1.05); /* Zvýšení vizuální velikosti */
+    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.2); /* Zvýraznění stínu */
+    border-color: white; /* Viditelný rámeček na hover */
 }
 
-.grid-h3-2 {
-    margin-top: 38px;
-    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
-}
-
-.grid button {
-    text-decoration: none;
-    color: white;
-}
-
-.grid a {
-    text-decoration: none;
-    color: white;
-}
-
-@media only screen and (max-width: 600px) {
-    .grid-item {
-        background-color: #2c3036;
-        text-align: center;
-        border-radius: 10%;
-        width: 150px;
-        height: 150px;
-        font-size: 15px;
-        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
-    }
-}
-
-.ripple-button:disabled {
-    cursor: not-allowed;
-    /* Další styly pro zobrazení disabled tlačítka, např. změna barvy pozadí nebo textu */
-    opacity: 0.5;
-    /* Příklad: Změna průhlednosti pro naznačení, že je tlačítko disabled */
-}
-
-.ripple-button2:disabled {
-    cursor: not-allowed;
-    /* Další styly pro zobrazení disabled tlačítka, např. změna barvy pozadí nebo textu */
-    opacity: 0.5;
-    /* Příklad: Změna průhlednosti pro naznačení, že je tlačítko disabled */
-}
-
-.ripple-button3:disabled {
-    cursor: not-allowed;
-    /* Další styly pro zobrazení disabled tlačítka, např. změna barvy pozadí nebo textu */
-    opacity: 0.5;
-    /* Příklad: Změna průhlednosti pro naznačení, že je tlačítko disabled */
-}
-
-.ripple-button {
-    margin-top: 23%;
-}
-
-.ripple-button2 {
-    margin-top: 8%;
-}
-
-.ripple-button3 {
-    margin-top: -10%;
-}
-
-
-/* ... (Zde může být další kód pro tlačítka a ripple efekt) */
-
-@media screen and (min-width: 1200px) {
-
-    /* Pokud je šířka obrazovky alespoň 1200px, změňte na 4 sloupce */
-    .grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
+.grid-item h3 {
+    margin: 0; /* Odstranění defaultního marginu */
+    font-size: 25px; /* Velikost textu */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Jemný stín textu */
+    text-align: center; /* Zarovnání textu na střed */
 }
 
 @media screen and (max-width: 600px) {
     .grid {
-        grid-template-columns: 1fr;
-        justify-content: center;
+        grid-template-columns: 1fr; /* Jediný sloupec na menších obrazovkách */
+        grid-gap: 10px; /* Menší mezery */
+        display: grid;
+        list-style: none; /* Odstranění odrážek */
+        padding: 0;
+        margin: 0;
+        
+    }
+
+    .grid-item {
+        width: 100%; /* Šířka se přizpůsobí gridu */
+        height: auto; /* Automatická výška */
+        background-color: #25292e; /* Tmavé pozadí */
+        border-radius: 10%; /* Zaoblení rohů */
+        border: 4px solid transparent; /* Rezervace místa pro rámeček */
+        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1); /* Jemný stín */
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease; /* Animace */
+        overflow: hidden; /* Zajištění, že obsah nepřeteče */
+        position: relative;
     }
 
 
-    main {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+
+    .grid {
         align-items: center;
     }
+
+    .grid-item {
+        align-content: center;
+    }
+
+    .grid-item a {
+        display: flex; /* Flexbox pro centrování obsahu */
+        justify-content: center; /* Centrovaný text horizontálně */
+        align-items: center; /* Centrovaný text vertikálně */
+        width: 12.5rem;
+        height: 12.5rem;
+        text-decoration: none; /* Odstranění podtržení */
+        color: white; /* Barva textu */
+    }
+
+    .grid-item:hover {
+        transform: scale(1.05); /* Zvýšení vizuální velikosti */
+        box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.2); /* Zvýraznění stínu */
+        border-color: white; /* Viditelný rámeček na hover */
+    }
+
+
 }
