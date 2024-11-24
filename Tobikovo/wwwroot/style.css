@@ -8,6 +8,8 @@ span,
 button,
 li,
 ul,
+textarea,
+.opinion-input,
 #myNavbar a {
     font-family: 'Outfit', sans-serif;
 }
@@ -44,24 +46,24 @@ body {
     color: white;
     text-decoration: none;
     text-align: right;
-    margin-left: 0px;
+    margin-left: 0;
 }
 
 .mobile-nav hr {
     visibility: hidden;
-    border-radius: 0px;
-    padding: 0px;
-    margin-left: 0px;
+    border-radius: 0;
+    padding: 0;
+    margin-left: 0;
 }
 
 .mobile-nav {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
     visibility: hidden;
-    padding: 0px;
-    border-radius: 0px;
-    margin-top: 0px;
-    width: 0px;
+    padding: 0;
+    border-radius: 0;
+    margin-top: 0;
+    width: 0;
 }
 hr {
     color: white;
@@ -131,7 +133,7 @@ main {
 section {
     max-width: 800px;
     text-align: center;
-    margin-top: 0px;
+    margin-top: 0;
     padding: 20px;
     flex-grow: 1;
     /* Umožňuje, aby se tato část roztahovala */
@@ -155,7 +157,7 @@ h1 {
     }
 
     main {
-        margin-left: 0px;
+        margin-left: 0;
         flex-grow: 1;
         display: flex;
         flex-direction: column;
@@ -167,7 +169,7 @@ h1 {
         color: white;
         text-decoration: none;
         text-align: right;
-        margin-left: 0px;
+        margin-left: 0;
     }
         .mobile-nav a:hover {
             background-color: #1f1f1f;
@@ -175,9 +177,9 @@ h1 {
 
     .mobile-nav hr {
         visibility: visible;
-        border-radius: 0px;
-        padding: 0px;
-        margin-left: 0px;
+        border-radius: 0;
+        padding: 0;
+        margin-left: 0;
     }
 
     .mobile-nav {
@@ -224,7 +226,7 @@ a {
 @media only screen and (max-width: 600px) {
     .verybig {
         font-size: 40px;
-        margin-top: 0px;
+        margin-top: 0;
         text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
     }
 }
@@ -296,9 +298,8 @@ button:active {
 
     .nav-button {
         border-radius: 16px;
-        border: solid 0px black;
+        border: none;
         cursor: pointer;
-        font-size: 300px;
         outline: none;
         color: white;
         font-size: 16px;
@@ -310,7 +311,42 @@ button:active {
         position: absolute;
         top: 0;
         right: 0;
-        border: 0px solid black;
+        border: none;
         visibility: visible;
     }
 }
+/* textarea styly */
+
+textarea {
+    border-radius: 10px;
+    border: 2px solid #35393f;
+    background-color: #35393f;
+    color: white;
+    overflow: hidden; /* Skryje posuvník */
+    resize: none;     /* Zabrání uživateli měnit velikost */
+    padding: 0.5rem;
+}
+textarea:focus {
+    border: 2px solid white;
+    outline: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    textarea {
+        min-width: 20rem;
+        min-height: 10rem;
+        max-width: 20rem;
+        max-height: 10rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    textarea {
+        min-width: 50rem;
+        min-height: 25rem;
+        max-width: 60rem;
+        max-height: 15rem;
+    }
+}
+/* ggg */
+
