@@ -1,6 +1,6 @@
 @page "/nazor"
 
-<PageTitle>Váš názor</PageTitle>
+<PageTitle>Vaše zpětná vazba</PageTitle>
 
 @using System.Text.Json;
 @using System.ComponentModel.DataAnnotations;
@@ -59,10 +59,10 @@
     }
 </style>
 <section>
-    <h1 class="verybig">Váš názor</h1>
+    <h1 class="verybig">Vaše zpětná vazba</h1>
     <div style="text-align: left">
         <h2>Přidat</h2>
-        <p>Napište nám svůj názor.</p>
+        <p>Napište nám svou zpětnou vazbu.</p>
         
         <EditForm EditContext="@_editContext" OnValidSubmit="@HandleSubmitAsync" FormName="OpinionForm">
 
@@ -74,17 +74,17 @@
             </div>
 
         <div class="form-group" style="text-align: left">
-                <InputTextArea @bind-Value="_newOpinion.Text" placeholder="Zde napište svůj názor" />
+                <InputTextArea @bind-Value="_newOpinion.Text" placeholder="Zde napište svou zpětnou vazbu" />
             </div>
 
             <div style="text-align: center">
-                <button type="submit" style="margin: 1rem">Přidat názor</button>
+                <button type="submit" style="margin: 1rem">Přidat zpětnou vazbu</button>
             </div>
         </EditForm>
 
         
         
-        <h2>Názory ostatních</h2>
+        <h2>Zpětná vazba ostatních</h2>
         <span style="color: #9c9c9c"><em>od nejnovějšího k nejstaršímu</em></span>
         <div class="opinions-container">
             @foreach (var opinion in _opinions.OrderByDescending(o => o.Date))
@@ -110,7 +110,7 @@
     private OpinionModel _newOpinion = new();
     private EditContext? _editContext;
 
-    private const string FilePath = "opinions.json";
+    private const string FilePath = "wwwroot/opinions.json";
 
     protected override async Task OnInitializedAsync()
     {
@@ -157,7 +157,7 @@
 
     public class OpinionModel
     {
-        [Required(ErrorMessage = "prosím zadejte názor")]
+        [Required(ErrorMessage = "prosím zadejte vaši zpětnou vazbu")]
         public string Text { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "prosím zadejte vaše jméno")]

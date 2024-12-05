@@ -1,16 +1,16 @@
 ﻿@inherits LayoutComponentBase
-<head>
-    <link  rel="stylesheet" href="~/nav.css"/>
-
-    <style>
-        
-    </style>
-</head>
 <div class="page">
     <div class="sidebar">
         <NavMenu />
     </div>
-
+    <style>
+        .navtext {
+            margin-bottom: 5rem;
+            margin-top: auto;
+            color: #646b74;
+            text-align: center;
+        }
+    </style>
     <main>
         <div class="loading-bar-container">
             <div class="loading-bar"></div>
@@ -27,7 +27,9 @@
                     <p><a class="mobile-nav" href="chemie">Chemie</a></p>
                 <hr class="mobile-nav">
                 <p><a class="mobile-nav" href="about">O mně</a></p>
-                <p><a class="mobile-nav" href="nazor">Váš názor</a></p>
+                <p><a class="mobile-nav" href="nazor">Vaše zpětná vazba</a></p>
+                <p><a class="mobile-nav" href="changelog">Deník změn</a></p>
+                    <span class="navtext">24w49a</span>
             </div>
             @Body
             <br />
