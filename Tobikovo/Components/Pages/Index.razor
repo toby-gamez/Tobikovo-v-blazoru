@@ -1,43 +1,112 @@
 ﻿@page "/"
 
 <PageTitle>Domů</PageTitle>
+<link rel="stylesheet" href="IndexStyle.css">
+        <section>
+            <h1></h1>
+            <h1 class="citat">Učivo</h1>
+            <h1 class="citat">základní školy</h1>
+            <h1 class="citat">již</h1>
+            <h1 class="citat">nikdy</h1>
+            <h1 class="citat">nebylo</h1>
+            <h1 class="citat">lehčí</h1>
+            <h1 class="citat">získat.</h1>
+            <h1 class="maly-text">Tobias Heneman</h1>
+            <div style="margin-top: 25rem;">
+                <h1 class="citat underlined">Učivo</h1>
+            </div>
 
-<section id="#ucivo">
-    <h1 class="verybig">Tobikovo</h1>
-    <h1>Učivo</h1>
+            <div class="card-grid">
+                <div class="card">
+                    <a href="mluvnice.html">
+                        <img src="images/mluvnice.png" alt="Karta 1" class="card-image">
+                        <div class="card-content">
+                            <p class="card-description">Celá gramatika českého jazyka.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="literatura.html">
+                        <img src="images/literatura.png" alt="Karta 1" class="card-image">
+                        <div class="card-content">
+                            <p class="card-description">Vše o literatuře, minulost, historie, díla atd.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="sloh.html">
+                        <img src="images/sloh.png" alt="Karta 3" class="card-image">
+                        <div class="card-content">
+                            <p class="card-description">Zde jsou informace o tom, jak správně psát slohové práce.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="hudebni-vychova.html">
+                        <img src="images/hudebni-vychova.png" alt="Karta 4" class="card-image">
+                        <div class="card-content">
+                            <p class="card-description">Muzika, takty, představitelé, žánry, díla a více!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="matematika.html">
+                        <img src="images/matematika.png" alt="Karta 4" class="card-image">
+                        <div class="card-content">
+                            <p class="card-description">Matematika zahrnuje mocniny, geometrii, trojčlenku, ale i
+                                jak počítat 1+1.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="chemie.html">
+                        <img src="images/chemie.png" alt="Karta 4" class="card-image">
+                        <div class="card-content">
+                            <p class="card-description">Periodická soustava prvků, tělesa, látky směsi atomy a více!</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section>
 
+            <div style="margin-top: 10rem;">
 
-        <ul class="grid">
-            <li class="grid-item">
-                <a href="mluvnice">
-                    <h3 class="grid-h3">MLUVNICE</h3>
-                </a>
-            </li>
-            <li class="grid-item">
-                <a href="literatura">
-                    <h3 class="grid-h3">LITERATURA</h3>
-                </a>
-            </li>
-            <li class="grid-item">
-                <a href="sloh">
-                    <h3 class="grid-h3">SLOH</h3>
-                </a>
-            </li>
-            <li class="grid-item">
-                <a href="hudebni-vychova">
-                    <h3 class="grid-h3">HUDEBNÍ VÝCHOVA</h3>
-                </a>
-            </li>
-            <li class="grid-item">
-                <a href="matematika">
-                    <h3 class="grid-h3">MATEMATIKA</h3>
-                </a>
-            </li>
-            <li class="grid-item">
-                <a href="chemie">
-                    <h3 class="grid-h3">CHEMIE</h3>
-                </a>
-            </li>
-        </ul>
+            </div>
+            <h1>Konec</h1>
+            <button onclick="Home()">Domů</button>
+        </section>
 
-</section>
+    <script>
+        function checkScroll() {
+            const elements = document.querySelectorAll('h1, h2, h3, .card');
+            const windowHeight = window.innerHeight;
+
+            elements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+
+                // Speciální pravidla pro různé typy elementů
+                if (el.classList.contains('citat') || el.classList.contains('card')) {
+                    if (elementTop < windowHeight * 0.90) {
+                        el.classList.add('visible');
+                    }
+                } else if (el.classList.contains('maly-text')) {
+                    if (elementTop < windowHeight * 0.9) {
+                        el.classList.add('visible');
+                    }
+                } else {
+                    // Výchozí chování pro ostatní elementy
+                    if (elementTop < windowHeight * 0.10) {
+                        el.classList.add('visible');
+                    }
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('load', checkScroll);
+
+        function Home() {
+            window.location.href = "home";
+        }
+    </script>
