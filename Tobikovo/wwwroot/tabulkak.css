@@ -2,20 +2,19 @@ table {
     border-collapse: collapse;
     border-radius: 10px;
     overflow: hidden;
-    margin: 20px;
+    margin: 10px;
 }
 
 
 
 th,
 td {
-    padding: 15px;
+    padding: 10px;
     text-align: left;
-    border-bottom: 1px solid rgb(255, 255, 255);
-    background-color: #1f1f1f;
-    font-family: 'Roboto Mono', monospace;
+    background-color: #ffad8f;
+    text-align: center;
 }
+
 th {
-    font-family: 'Roboto Mono', monospace;
-    background-color: #35393f;
+    background-color: #ff946c;
 }

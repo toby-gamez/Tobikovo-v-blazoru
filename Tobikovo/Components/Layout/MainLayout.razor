@@ -4,11 +4,9 @@
         <NavMenu />
     </div>
     <style>
-        .navtext {
-            margin-bottom: 5rem;
-            margin-top: auto;
-            color: #646b74;
-            text-align: center;
+        .black-arrow {
+            color: #160703;
+            font-size: 1.3rem;
         }
     </style>
     <main>
@@ -16,7 +14,7 @@
             <div class="loading-bar"></div>
         </div>
         <article>
-                <div class="mobile-nav">
+            <div class="mobile-nav">
                 <p><a class="mobile-nav" href="home">Domů</a></p>
                 <hr class="mobile-nav">
                 <p><a class="mobile-nav" href="mluvnice">Mluvnice</a></p>
@@ -24,19 +22,22 @@
                 <p><a class="mobile-nav" href="sloh">Sloh</a></p>
                 <p><a class="mobile-nav" href="hudebka">Hudební výchova</a></p>
                 <p><a class="mobile-nav" href="matematika">Matematika</a></p>
-                    <p><a class="mobile-nav" href="chemie">Chemie</a></p>
+                <p><a class="mobile-nav" href="chemie">Chemie</a></p>
                 <hr class="mobile-nav">
                 <p><a class="mobile-nav" href="about">O mně</a></p>
                 <p><a class="mobile-nav" href="nazor">Vaše zpětná vazba</a></p>
                 <p><a class="mobile-nav" href="changelog">Deník změn</a></p>
-                    <span class="navtext">24w50a</span>
+                <span class="navtext">24w50b</span>
             </div>
             @Body
-            <br />
-            <br />
-            <br />
-            <br />
         </article>
+        <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+            <span class="black-arrow">↑</span>
+        </button>
+        <br />
+        <br />
+        <br />
+        <br />
     </main>
 
 
@@ -76,6 +77,29 @@
         // Prvotní nastavení při načtení stránky
         updateLoadingBar();
     });
+
+    const scrollToTopButton = document.getElementById('scrollToTop');
+
+    document.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+            scrollToTopButton.classList.remove('hidden'); // Zruší skrytí
+            scrollToTopButton.classList.add('visible'); // Zobrazí
+            scrollToTopButton.style.visibility = 'visible'; // Explicitně nastaví viditelnost
+        } else if (scrollToTopButton.classList.contains('visible')) {
+            scrollToTopButton.classList.remove('visible'); // Zruší zobrazení
+            scrollToTopButton.classList.add('hidden'); // Skryje
+        }
+    });
+
+    scrollToTopButton.addEventListener('transitionend', function () {
+        if (scrollToTopButton.classList.contains('hidden')) {
+            scrollToTopButton.style.visibility = 'hidden'; // Skryje tlačítko po skončení animace
+        }
+    });
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 </script>
 <script src="Buttons.js"></script>
 

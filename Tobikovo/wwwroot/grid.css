@@ -8,61 +8,76 @@
 }
 
 .grid-item {
-    width: 180px; /* Šířka položky */
-    height: 180px; /* Výška položky */
-    background-color: #25292e; /* Tmavé pozadí */
-    border-radius: 10%; /* Zaoblení rohů */
-    border: 4px solid transparent; /* Rezervace místa pro rámeček */
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1); /* Jemný stín */
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease; /* Animace */
-    overflow: hidden; /* Zajištění, že obsah nepřeteče */
+    width: 180px;
+    /* Šířka položky */
+    height: 180px;
+    /* Výška položky */
+    background-color: #ffad8f;
+    /* Tmavé pozadí */
+    border-radius: 10%;
+    /* Zaoblení rohů */
+    border: 4px solid transparent;
+    /* Rezervace místa pro rámeček */
+    transition: transform 0.2s ease, border 0.2s ease;
+    /* Animace */
+    overflow: hidden;
+    /* Zajištění, že obsah nepřeteče */
     position: relative;
 }
 
 .grid-item a {
-    display: flex; /* Flexbox pro centrování obsahu */
-    justify-content: center; /* Centrovaný text horizontálně */
-    align-items: center; /* Centrovaný text vertikálně */
-    width: 100%; /* Roztažení odkazu na celou šířku položky */
-    height: 100%; /* Roztažení odkazu na celou výšku položky */
-    text-decoration: none; /* Odstranění podtržení */
-    color: white; /* Barva textu */
+    display: flex;
+    /* Flexbox pro centrování obsahu */
+    justify-content: center;
+    /* Centrovaný text horizontálně */
+    align-items: center;
+    /* Centrovaný text vertikálně */
+    width: 100%;
+    /* Roztažení odkazu na celou šířku položky */
+    height: 100%;
+    /* Roztažení odkazu na celou výšku položky */
+    text-decoration: none;
 }
 
 .grid-item:hover {
-    transform: scale(1.05); /* Zvýšení vizuální velikosti */
-    box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.2); /* Zvýraznění stínu */
-    border-color: white; /* Viditelný rámeček na hover */
+    transform: scale(1.05);
+    /* Zvýšení vizuální velikosti */
+    border-color: #160703;
+    /* Viditelný rámeček na hover */
+}
+
+.grid-item:active {
+    transform: scale(0.95);
 }
 
 .grid-item h3 {
-    margin: 0; /* Odstranění defaultního marginu */
-    font-size: 25px; /* Velikost textu */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Jemný stín textu */
-    text-align: center; /* Zarovnání textu na střed */
+    margin: 0;
+    /* Odstranění defaultního marginu */
+    /* Velikost textu */
+    text-align: center;
+    font-size: 1.3rem;
 }
 
 @media screen and (max-width: 600px) {
     .grid {
-        grid-template-columns: 1fr; /* Jediný sloupec na menších obrazovkách */
-        grid-gap: 10px; /* Menší mezery */
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
         display: grid;
-        list-style: none; /* Odstranění odrážek */
+        list-style: none;
         padding: 0;
         margin: 0;
+        align-items: center;
         
     }
 
     .grid-item {
-        width: 100%; /* Šířka se přizpůsobí gridu */
-        height: auto; /* Automatická výška */
-        background-color: #25292e; /* Tmavé pozadí */
-        border-radius: 10%; /* Zaoblení rohů */
-        border: 4px solid transparent; /* Rezervace místa pro rámeček */
-        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1); /* Jemný stín */
-        transition: transform 0.2s ease, box-shadow 0.2s ease, border 0.2s ease; /* Animace */
-        overflow: hidden; /* Zajištění, že obsah nepřeteče */
+        width: 12.5rem;
+        height: 12.5rem;
+        border-radius: 10%;
+        border: 4px solid transparent;
+        overflow: hidden;
         position: relative;
+        align-content: center;
     }
 
 
@@ -76,19 +91,20 @@
     }
 
     .grid-item a {
-        display: flex; /* Flexbox pro centrování obsahu */
-        justify-content: center; /* Centrovaný text horizontálně */
-        align-items: center; /* Centrovaný text vertikálně */
+        display: flex;
+        /* Flexbox pro centrování obsahu */
+        justify-content: center;
+        /* Centrovaný text horizontálně */
+        align-items: center;
+        /* Centrovaný text vertikálně */
         width: 12.5rem;
         height: 12.5rem;
-        text-decoration: none; /* Odstranění podtržení */
-        color: white; /* Barva textu */
+        text-decoration: none;
+        margin: 0;
     }
 
     .grid-item:hover {
-        transform: scale(1.05); /* Zvýšení vizuální velikosti */
-        box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.2); /* Zvýraznění stínu */
-        border-color: white; /* Viditelný rámeček na hover */
+        transform: scale(1.05);
     }
 
 

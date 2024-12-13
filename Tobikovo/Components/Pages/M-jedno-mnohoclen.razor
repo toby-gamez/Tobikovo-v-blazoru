@@ -5,69 +5,85 @@
         <section>
             <h1 class="verybig">Jednočlen a mnohočlen</h1>
             <div style="text-align: left;">
-                <h2>Co je to jednočlen?</h2>
-                <p>Jednočlen je výraz, který se skládá pouze z čísla, písmena (proměnné) a jejich součinu. Může
-                    obsahovat součiny nebo mocniny, ale ne součty a rozdíly. Například:</p>
+                <h2>Násobení dvojčlenu jednočlenem</h2>
+                <p>Při násobení dvojčlenu jednočlenem vynásobíme jednočlen každým členem dvojčlenu zvlášť. Používáme
+                    pravidlo distributivity:</p>
+                <p><em>a(b + c) = ab + ac</em></p>
+                <p>Příklad</p>
+                <p><code>2x(3x + 4)</code></p>
                 <ul>
-                    <li><em>3x</em> (číslo 3 násobí proměnnou <em>x</em>)</li>
-                    <li><em>4a²</em> (číslo 4 násobí proměnnou <em>a</em>, která je umocněná na druhou)</li>
-                    <li><em>-2ab</em> (číslo -2 násobí proměnné <em>a</em> a <em>b</em>)</li>
+                    <li>Vynásobíme <code>2x</code> členem <code>3x</code>: <code>2x × 3x = 6x²</code></li>
+                    <li>Vynásobíme <code>2x</code> členem <code>4</code>: <code>2x × 4 = 8x</code></li>
                 </ul>
-                <p>Jednočlen tedy nemůže obsahovat sčítání nebo odečítání, například <em>3x + 4</em> není jednočlen,
-                    protože obsahuje součet.</p>
+                <p>Výsledek: <code>2x(3x + 4) = 6x² + 8x</code></p>
 
-                <h2>Co je to mnohočlen?</h2>
-                <p>Mnohočlen je algebraický výraz, který se skládá z několika jednočlenů spojených operacemi sčítání a/o
-                    odečítání. Každý člen může být jednočlen nebo součet jednočlenů. Například:</p>
+                <h2>Násobení dvojčlenu dvojčlenem</h2>
+                <p>Při násobení dvojčlenu dvojčlenem vynásobíme každý člen prvního dvojčlenu všemi členy druhého
+                    dvojčlenu. Výrazy pak sečteme. Používáme tzv. <strong>FOIL pravidlo</strong> (z angličtiny "First,
+                    Outer, Inner, Last"):</p>
+                <p><em>(a + b)(c + d) = ac + ad + bc + bd</em></p>
+
+                <p>Příklad</p>
+                <p><code>(x + 2)(x + 3)</code></p>
                 <ul>
-                    <li><em>x + 5</em> (součet jednočlenu <em>x</em> a čísla 5)</li>
-                    <li><em>2x² + 3x - 7</em> (mnohočlen se třemi členy: <em>2x²</em>, <em>3x</em> a <em>-7</em>)</li>
-                    <li><em>a² - 4a + 6</em> (mnohočlen se třemi členy: <em>a²</em>, <em>-4a</em> a <em>+6</em>)</li>
+                    <li>první členy: <code>x × x = x²</code></li>
+                    <li>vnější členy: <code>x × 3 = 3x</code></li>
+                    <li>vnitřní členy: <code>2 × x = 2x</code></li>
+                    <li>poslední členy: <code>2 × 3 = 6</code></li>
                 </ul>
-                <p>Ve mnohočlenech se používají operace jako sčítání a odečítání, a každý člen může mít různou mocninu
-                    proměnné.</p>
+                <p>Výsledek: <code>(x + 2)(x + 3) = x² + 3x + 2x + 6 = x² + 5x + 6</code></p>
 
-                <h2>Úpravy jednočlenů a mnohočlenů</h2>
-                <h3>Úprava jednočlenů</h3>
-                <p>Jednočleny upravujeme především násobením a dělením. Například:</p>
+                <h2>Sčítání a odčítání dvojčlenů</h2>
+                <p>Sčítání a odčítání dvojčlenů probíhá tak, že sčítáme nebo odčítáme podobné členy. Podobné členy jsou
+                    ty, které mají stejné proměnné se stejnými mocninami.</p>
+                <p><em>(a + b) + (c + d) = (a + c) + (b + d)</em></p>
+                <p><em>(a + b) - (c + d) = (a - c) + (b - d)</em></p>
+
+                <p>Příklad</p>
+                <p><code>(3x + 4) + (5x - 2)</code></p>
                 <ul>
-                    <li><em>2x × 3x</em> = <em>6x²</em> (násobíme koeficienty a proměnné)</li>
-                    <li><em>5a ÷ 2</em> = <em>2,5a</em> (dělení jednočlenu číslem)</li>
-                    <li><em>-4ab × 3a</em> = <em>-12a²b</em> (násobíme koeficienty a sčítáme exponenty stejné proměnné)
-                    </li>
+                    <li>sčítáme členy s <code>x</code>: <code>3x + 5x = 8x</code></li>
+                    <li>sčítáme konstanty: <code>4 - 2 = 2</code></li>
                 </ul>
+                <p>Výsledek: <code>(3x + 4) + (5x - 2) = 8x + 2</code></p>
 
-                <h3>Úprava mnohočlenů</h3>
-                <p>U mnohočlenů provádíme především sčítání a odečítání podobných členů. To znamená, že sčítáme nebo
-                    odečítáme pouze ty členy, které mají stejné proměnné a stejné exponenty. Například:</p>
+                <p><code>(7x + 3) - (2x + 5)</code></p>
                 <ul>
-                    <li><em>3x + 5x</em> = <em>8x</em> (sčítáme podobné členy: obě mají proměnnou <em>x</em>)</li>
-                    <li><em>2x² + 4x²</em> = <em>6x²</em> (sčítáme podobné členy: oba mají proměnnou <em>x²</em>)</li>
-                    <li><em>5a - 3a</em> = <em>2a</em> (sčítáme nebo odečítáme členy se stejnou proměnnou)</li>
+                    <li>odčítáme členy s <code>x</code>: <code>7x - 2x = 5x</code></li>
+                    <li>odčítáme konstanty: <code>3 - 5 = -2</code></li>
                 </ul>
-                <p>Pokud mají členy různé proměnné nebo různé exponenty, nemůžeme je sčítat. Například <em>3x + 4y</em>
-                    nemůžeme upravit do jednoduché formy, protože mají různé proměnné (<em>x</em> a <em>y</em>).</p>
+                <p>Výsledek: <code>(7x + 3) - (2x + 5) = 5x - 2</code></p>
 
-                <h2>Praktické příklady</h2>
-                <h3>1. Příklad s jednočleny</h3>
-                <p>Mám jednočlen <em>4x × 3x</em>. Jak ho upravím?</p>
-                <pre><code>4x × 3x = 12x²</code></pre>
-                <p>Vynásobíme koeficienty (4 × 3 = 12) a přičteme exponenty proměnné (x¹ × x¹ = x²).</p>
-
-                <h3>2. Příklad s mnohočlenem</h3>
-                <p>Máme mnohočlen <em>2x² + 3x + 5x² - 7</em>. Jak ho upravím?</p>
-                <pre><code>2x² + 3x + 5x² - 7 = 7x² + 3x - 7</code></pre>
-                <p>Sčítáme podobné členy: <em>2x² + 5x² = 7x²</em> a <em>3x</em> zůstává samostatně.</p>
-
-                <h2>Zajímavosti o jednočlenech a mnohočlenech</h2>
+                <h3>Zvláštní případy</h3>
+                <h4>Druhá mocnina dvojčlenu</h4>
+                <p>Druhá mocnina dvojčlenu znamená, že dvojčlen násobíme sám sebou:</p>
+                <p><em>(a + b)² = (a + b)(a + b) = a² + 2ab + b²</em></p>
+                <p>Příklad</p>
+                <p><code>(x + 4)²</code></p>
                 <ul>
-                    <li>Jednočleny mohou mít různé koeficienty, mocniny a proměnné. Mohou obsahovat i záporné hodnoty.
-                    </li>
-                    <li>V mnohočlenech jsou různé členy spojeny operacemi jako sčítání nebo odečítání, což umožňuje více
-                        kombinací a variant řešení.</li>
-                    <li>Mnohočleny hrají důležitou roli v různých oblastech matematiky, jako je algebra a funkce, a jsou
-                        základem pro řešení složitějších rovnic.</li>
+                    <li>první člen: <code>x × x = x²</code></li>
+                    <li>vnější a vnitřní členy: <code>4x + 4x = 8x</code></li>
+                    <li>poslední člen: <code>4 × 4 = 16</code></li>
                 </ul>
+                <p>Výsledek: <code>(x + 4)² = x² + 8x + 16</code></p>
 
+                <h4>Rozdíl čtverců</h4>
+                <p>Při násobení dvojčlenů, které mají opačné znaménko, vzniká tzv. rozdíl čtverců:</p>
+                <p><em>(a + b)(a - b) = a² - b²</em></p>
+                <p>Příklad</p>
+                <p><code>(x + 5)(x - 5)</code></p>
+                <ul>
+                    <li>první člen: <code>x × x = x²</code></li>
+                    <li>poslední člen: <code>5 × -5 = -25</code></li>
+                </ul>
+                <p>Výsledek: <code>(x + 5)(x - 5) = x² - 25</code></p>
+
+                <h2>Tipy a triky</h2>
+                <ul>
+                    <li>Vždy dávejte pozor na znaménka při násobení, sčítání a odčítání.</li>
+                    <li>Při násobení více dvojčlenů postupujte systematicky (nejprve první dva, poté výsledek násobte
+                        dalším dvojčlenem).</li>
+                    <li>Zjednodušujte výsledky, pokud je to možné – sečtěte podobné členy.</li>
+                </ul>
             </div>
         </section>

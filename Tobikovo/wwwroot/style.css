@@ -1,36 +1,37 @@
 /* Stránka */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 p,
-span,
 li,
 ul,
 textarea {
-    font-family: "Nunito", sans-serif;
-    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
     font-style: normal;
+    font-size: 1.1rem;
+    color: #160703;
 }
-nav a,
-nav,
+
 .opinion-input,
 button,
-#myNavbar a {
-    font-family: 'Outfit', sans-serif;
-}
+nav a,
 h1,
 h2,
 h3,
 h4,
 h5 {
-    font-family: 'Noto Sans Mono', monospace;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #160703;
+
 }
 
 .verybig {
     font-size: 60px;
     margin-top: -200px;
-    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    top: -200px;
 }
 
 .priklad {
@@ -38,65 +39,42 @@ h5 {
 }
 
 body {
-    background-color: #16181b;
-    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    background-color: #ffe8df;
     margin: 0;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     /* Umožňuje vertikální rozložení */
 }
-.mobile-nav a {
-    visibility: hidden;
-    color: white;
-    text-decoration: none;
-    text-align: right;
-    margin-left: 0;
-}
-
-.mobile-nav hr {
-    visibility: hidden;
-    border-radius: 0;
-    padding: 0;
-    margin-left: 0;
-}
-
-.mobile-nav {
-    margin-left: 0;
-    margin-right: 0;
-    visibility: hidden;
-    padding: 0;
-    border-radius: 0;
-    margin-top: 0;
-    width: 0;
-}
 hr {
-    color: white;
+    color: #160703;
+}
+
+img {
+    border-radius: 10px;
 }
 
 .Mcard {
-    background-color: #35393f;
+    background-color: #ffad8f;
     /* odpovídá Bootstrap text-bg-secondary */
     color: #fff;
     /* textová barva */
-    max-width: 18rem;
     /* maximální šířka */
     border: 1px solid #ddd;
     /* přidání okraje */
-    border-radius: 0.25rem;
+    border-radius: 16px;
     /* zaoblené rohy */
 }
 
 .Minfo {
-    background-color: #2e3136;
     /* tmavší šedá pro hlavičku */
     padding: 0.75rem 1.25rem;
     /* padding */
-    border-bottom: 1px solid #ddd;
-    /* spodní okraj */
-    border-top-left-radius: 0.25rem;
+    border-top-left-radius: 16px;
     /* zaoblené rohy nahoře */
-    border-top-right-radius: 0.25rem;
+    border-top-right-radius: 16px;
+    background-color: #ff946c;
 }
 
 .Mtelo {
@@ -107,22 +85,19 @@ hr {
 .Mnadpis {
     font-size: 1.25rem;
     /* velikost písma */
-    margin-bottom: 0.75rem;
-    /* spodní okraj */
 }
 
 
 
 @media screen and (max-width: 600px) {
     hr {
-        color: white;
         width: 290px;
     }
 }
 
 .grid .subtitle {
     font-size: 13px;
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 main {
@@ -133,6 +108,58 @@ main {
     justify-content: center;
     align-items: center;
 }
+/* mobile-navy nechat, protože to jinak nefunguje správně (rozhodně nedávat do NavMenu.razor.css) */
+.mobile-nav a {
+    visibility: collapse;
+}
+
+.mobile-nav hr {
+    visibility: collapse;
+}
+
+.mobile-nav {
+    visibility: collapse;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .mobile-nav a {
+        visibility: visible;
+        text-decoration: none;
+        text-align: right;
+        margin-left: 0;
+        color: #160703;
+    }
+
+    .mobile-nav hr {
+        visibility: visible;
+        border-radius: 0;
+        padding: 0;
+        margin-left: 0;
+    }
+
+
+    .mobile-nav {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        justify-content: center;
+        visibility: visible;
+        background-color: #ffad8f;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 20px;
+        
+    }
+}
+.navtext {
+    color: #6e2300;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+
+
+
 
 /* Změny pro grid a jiné prvky */
 section {
@@ -169,39 +196,10 @@ h1 {
         justify-content: center;
         align-items: center;
     }
-    .mobile-nav a {
-        visibility: visible;
-        color: white;
-        text-decoration: none;
-        text-align: right;
-        margin-left: 0;
-    }
-        .mobile-nav a:hover {
-            background-color: #1f1f1f;
-        }
-
-    .mobile-nav hr {
-        visibility: visible;
-        border-radius: 0;
-        padding: 0;
-        margin-left: 0;
-    }
-
-    .mobile-nav {
-        margin-left: 60px;
-        margin-right: 60px;
-        justify-content: center;
-        visibility: visible;
-        background-color: #35393f;
-        padding: 10px;
-        border-radius: 10px;
-        margin-top: 20px;
-        width: 280px;
-    }
 }
 
 a {
-    color: #4d8fdb;
+    color: #ff946c;
 }
 
 /* Styly pro loading bar */
@@ -209,7 +207,8 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 93.5%;
+    margin-left: 130px;
     height: 5px;
     background-color: transparent;
     z-index: 9999;
@@ -220,19 +219,17 @@ a {
     height: 5px;
     /* Nastavte výšku podle potřeby */
     width: 0;
-    background-color: #ffffff;
-    /* Modrá barva */
-    transition: width 0.2s linear;
-    /* Plynulý přechod */
+    background-color: #fb8241;
 }
 
-
-
 @media only screen and (max-width: 600px) {
+    .loading-bar-container {
+        width: 100%;
+        margin-left: 0;
+    }
     .verybig {
         font-size: 40px;
         margin-top: 0;
-        text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -252,27 +249,20 @@ a {
 /* Tlačítka */
 
 button {
-    border-radius: 16px;
-    border: solid 3px white;
-    background-color: transparent;
+    border-radius: 10px;
+    border: 0px white;
+    background-color: #ff946c;
     cursor: pointer;
     outline: none;
-    color: white;
+    color: #220b00;
     font-size: 16px;
     padding: 10px 20px;
 }
 
-.spark {
-    position: absolute;
-    width: 30px;
-    height: 8px;
-    border-radius: 3px;
-    background-color: white;
-    transform: none;
-}
-
 button:hover {
-    background-color: #616161;
+    background-color: #ff7340;
+    transform: scale(1.05);
+    /* Zvýšení vizuální velikosti */
 }
 
 button:active {
@@ -291,48 +281,30 @@ button:active {
 
 @media only screen and (max-width: 600px) {
     button {
-        border-radius: 16px;
-        border: solid 3px white;
-        background-color: transparent;
         cursor: pointer;
-        outline: none;
-        color: white;
         font-size: 16px;
         padding: 10px 20px;
     }
+}
 
-    .nav-button {
-        border-radius: 16px;
-        border: none;
-        cursor: pointer;
-        outline: none;
-        color: white;
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    .opennav-button {
-        font-size: 50px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        border: none;
-        visibility: visible;
-    }
+mn {
+    font-family: 'Poppins', sans-serif;
 }
 /* textarea styly */
 
 textarea {
     border-radius: 10px;
-    border: 2px solid #35393f;
-    background-color: #35393f;
-    color: white;
-    overflow: hidden; /* Skryje posuvník */
-    resize: none;     /* Zabrání uživateli měnit velikost */
+    border: 2px solid #ffad8f;
+    background-color: #ffad8f;
+    color: #220b00;
+    overflow: hidden;
+    /* Skryje posuvník */
+    resize: none;
+    /* Zabrání uživateli měnit velikost */
     padding: 0.5rem;
 }
 textarea:focus {
-    border: 2px solid white;
+    border: 2px solid #220b00;
     outline: none;
 }
 
@@ -351,5 +323,123 @@ textarea:focus {
         min-height: 25rem;
         max-width: 60rem;
         max-height: 15rem;
+    }
+}
+
+.opinion-input {
+    width: 20rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: 2px solid #ffad8f;
+    background-color: #ffad8f;
+    color: #220b00;
+    margin-bottom: 1rem;
+}
+
+.opinion-input:focus,
+textarea:focus {
+    border: 2px solid #220b00;
+    outline: none;
+}
+
+button {
+    margin: 0.5rem;
+}
+
+.opinions-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.opinion-card {
+    background-color: #ffad8f;
+    border-radius: 8px;
+    padding: 1rem;
+    position: relative;
+}
+
+.opinion-card:hover {
+    transform: translateY(-2px);
+}
+
+.opinion-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #6e2300;
+    font-size: 0.875rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 7rem;
+    right: 7rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0; /* Výchozí stav: skryto */
+    transform: scale(0); /* Výchozí stav: zmenšené */
+    visibility: hidden; /* Skryté */
+    border: 3px solid #ff946c;
+    background-color: #ffad8f;
+}
+
+.scroll-to-top.visible {
+    opacity: 1; /* Viditelné */
+    transform: scale(1); /* Normální velikost */
+    visibility: visible; /* Zobrazené */
+}
+
+.scroll-to-top.hidden {
+    opacity: 0; /* Skryté */
+    transform: scale(0); /* Zmenšené */
+    visibility: visible; /* Stále viditelné po dobu animace */
+}
+
+@media only screen and (max-width: 600px) {
+    .scroll-to-top {
+        visibility: hidden; /* Skryté */
+        opacity: 0;
+    }
+
+    .scroll-to-top.visible {
+        visibility: hidden; /* Zobrazené */
+        opacity: 0;
+    }
+
+    .scroll-to-top.hidden {
+        visibility: hidden; /* Stále viditelné po dobu animace */
+        opacity: 0;
+    }
+}
+
+.static-text {
+    visibility: visible;
+    position: fixed;
+    top: 4rem;
+    right: 4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border: 3px solid #ff946c;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffad8f;
+}
+
+@media only screen and (max-width: 600px) {
+    .static-text {
+        visibility: hidden;
     }
 }

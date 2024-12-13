@@ -107,3 +107,25 @@ code {
         font-size: 20px;
     }
 }
+
+h4 {
+    font-size: 25px;
+}
+
+nav {
+    visibility: hidden;
+}
+
+.mobile-nav a {
+    visibility: hidden;
+}
+
+.mobile-nav hr {
+    visibility: hidden;
+}
+
+
+.mobile-nav {
+    visibility: hidden;
+
+}

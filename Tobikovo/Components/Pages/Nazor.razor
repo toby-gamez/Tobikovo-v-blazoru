@@ -6,58 +6,6 @@
 @using System.ComponentModel.DataAnnotations;
 @using System.IO;
 @rendermode InteractiveServer
-
-<style>
-
-    textarea {
-        padding: 0.5rem;
-    }
-    .opinion-input {
-        width: 20rem;
-        border-radius: 10px;
-        border: 2px solid #35393f;
-        background-color: #35393f;
-        color: white;
-        margin-bottom: 1rem;
-        font-family: 'Outfit', sans-serif;
-        padding: 0.5rem;
-    }
-    .opinion-input:focus {
-        border: 2px solid white;
-        outline: none;
-    }
-
-    .opinions-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 1rem;
-        margin-top: 2rem;
-    }
-
-    .opinion-card {
-        background-color: #25292e;
-        border-radius: 8px;
-        padding: 1rem;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        transition: transform 0.2s;
-    }
-
-    .opinion-card:hover {
-        transform: translateY(-2px);
-    }
-
-    .opinion-text {
-        margin: 0 0 1rem 0;
-        line-height: 1.5;
-    }
-
-    .opinion-meta {
-        display: flex;
-        justify-content: space-between;
-        color: #9c9c9c;
-        font-size: 0.875rem;
-    }
-</style>
 <section>
     <h1 class="verybig">Vaše zpětná vazba</h1>
     <div style="text-align: left">
