@@ -26,7 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Components\Pages\Ml-shoda-prisudku-s-podmetem.razor" />
     <None Include="Components\Pages\PageTitle.razor" />
     <None Include="wwwroot\Buttons.js" />
   </ItemGroup>

@@ -287,7 +287,8 @@ button:active {
     }
 }
 
-mn {
+mn,
+mi {
     font-family: 'Poppins', sans-serif;
 }
 /* textarea styly */
