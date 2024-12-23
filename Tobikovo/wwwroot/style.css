@@ -27,6 +27,15 @@ h5 {
     color: #160703;
 
 }
+h2{
+    font-size: 35px;
+}
+h3{
+    font-size: 25px;
+}
+h4{
+    font-size: 20px;
+}
 
 .verybig {
     font-size: 60px;
@@ -48,10 +57,13 @@ body {
     /* Umožňuje vertikální rozložení */
 }
 hr {
-    color: #160703;
+    background-color: #160703;
+    height: 3px;
+    border: none;
 }
 
-img {
+img,
+video{
     border-radius: 10px;
 }
 
@@ -187,6 +199,12 @@ h1 {
     h2 {
         font-size: 20px;
     }
+    h3 {
+        font-size: 17px;
+    }
+    h4 {
+        font-size: 15px;
+    }
 
     main {
         margin-left: 0;
@@ -198,10 +216,17 @@ h1 {
     }
 }
 
-a {
-    color: #ff946c;
+main a {
+    color: #160703;
+    padding-top: 3px;
+    background-color: #ffad8f;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
-
+main a:hover {
+    background-color: #ff7340;
+}
 /* Styly pro loading bar */
 .loading-bar-container {
     position: fixed;
@@ -235,11 +260,6 @@ a {
 
 .underlined {
     text-decoration: underline;
-}
-
-.rounded {
-    border-radius: 10%;
-    padding: 1%;
 }
 
 .blog-image {
@@ -422,21 +442,6 @@ button {
         visibility: hidden; /* Stále viditelné po dobu animace */
         opacity: 0;
     }
-}
-
-.static-text {
-    visibility: visible;
-    position: fixed;
-    top: 4rem;
-    right: 4rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    border: 3px solid #ff946c;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #ffad8f;
 }
 
 @media only screen and (max-width: 600px) {
