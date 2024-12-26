@@ -1,5 +1,3 @@
-/* Stránka */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 p,
@@ -14,8 +12,9 @@ textarea {
 }
 
 .opinion-input,
+.version-info,
 button,
-nav a,
+.nav-link-content,
 h1,
 h2,
 h3,
@@ -27,24 +26,26 @@ h5 {
     color: #160703;
 
 }
-h2{
+
+h2 {
     font-size: 35px;
 }
-h3{
+
+h3 {
     font-size: 25px;
 }
-h4{
+
+h4 {
     font-size: 20px;
 }
 
 .verybig {
     font-size: 60px;
-    margin-top: -200px;
-    top: -200px;
 }
 
 .priklad {
-    font-family: 'Times new Roman', serif;
+    font-family: "Marcellus", serif;
+    font-size: 15px;
 }
 
 body {
@@ -56,6 +57,7 @@ body {
     flex-direction: column;
     /* Umožňuje vertikální rozložení */
 }
+
 hr {
     background-color: #160703;
     height: 3px;
@@ -63,7 +65,7 @@ hr {
 }
 
 img,
-video{
+video {
     border-radius: 10px;
 }
 
@@ -91,7 +93,6 @@ video{
 
 .Mtelo {
     padding: 1rem;
-    /* padding */
 }
 
 .Mnadpis {
@@ -105,6 +106,7 @@ video{
     hr {
         width: 290px;
     }
+
 }
 
 .grid .subtitle {
@@ -113,71 +115,21 @@ video{
 }
 
 main {
-    
+    margin-left: 130px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 60px;
 }
-/* mobile-navy nechat, protože to jinak nefunguje správně (rozhodně nedávat do NavMenu.razor.css) */
-.mobile-nav a {
-    visibility: collapse;
-}
-
-.mobile-nav hr {
-    visibility: collapse;
-}
-
-.mobile-nav {
-    visibility: collapse;
-}
-
-@media only screen and (max-width: 600px) {
-
-    .mobile-nav a {
-        visibility: visible;
-        text-decoration: none;
-        text-align: right;
-        margin-left: 0;
-        color: #160703;
-    }
-
-    .mobile-nav hr {
-        visibility: visible;
-        border-radius: 0;
-        padding: 0;
-        margin-left: 0;
-    }
-
-
-    .mobile-nav {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        justify-content: center;
-        visibility: visible;
-        background-color: #ffad8f;
-        padding: 10px;
-        border-radius: 10px;
-        margin-top: 20px;
-        
-    }
-}
-.navtext {
-    color: #6e2300;
-    margin-left: auto;
-    margin-right: 20px;
-}
-
-
-
-
 
 /* Změny pro grid a jiné prvky */
 section {
+    width: 80%;
     max-width: 800px;
     text-align: center;
-    margin-top: 0;
+    margin: auto;
     padding: 20px;
     flex-grow: 1;
     /* Umožňuje, aby se tato část roztahovala */
@@ -199,15 +151,17 @@ h1 {
     h2 {
         font-size: 20px;
     }
+
     h3 {
         font-size: 17px;
     }
+
     h4 {
         font-size: 15px;
     }
 
     main {
-        margin-left: 0;
+        margin-left: 0px;
         flex-grow: 1;
         display: flex;
         flex-direction: column;
@@ -218,22 +172,24 @@ h1 {
 
 main a {
     color: #160703;
-    padding-top: 3px;
+    padding: 3px;
     background-color: #ffad8f;
     text-decoration: none;
     border-radius: 10px;
     transition: background-color 0.3s ease;
 }
+
 main a:hover {
     background-color: #ff7340;
 }
+
 /* Styly pro loading bar */
 .loading-bar-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 93.5%;
-    margin-left: 130px;
+    margin-left: 285px;
     height: 5px;
     background-color: transparent;
     z-index: 9999;
@@ -245,6 +201,8 @@ main a:hover {
     /* Nastavte výšku podle potřeby */
     width: 0;
     background-color: #fb8241;
+    /* Modrá barva */
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -252,9 +210,12 @@ main a:hover {
         width: 100%;
         margin-left: 0;
     }
+}
+
+
+@media only screen and (max-width: 600px) {
     .verybig {
         font-size: 40px;
-        margin-top: 0;
     }
 }
 
@@ -279,24 +240,24 @@ button {
     padding: 10px 20px;
 }
 
+
+
 button:hover {
     background-color: #ff7340;
     transform: scale(1.05);
     /* Zvýšení vizuální velikosti */
+    border-color: #160703;
 }
 
 button:active {
     transform: scale(0.95);
 }
 
-.button:disabled {
+button:disabled {
     cursor: not-allowed;
     /* Další styly pro zobrazení disabled tlačítka, např. změna barvy pozadí nebo textu */
     opacity: 0.5;
     /* Příklad: Změna průhlednosti pro naznačení, že je tlačítko disabled */
-}
-.opennav-button {
-    visibility: hidden;
 }
 
 @media only screen and (max-width: 600px) {
@@ -305,13 +266,34 @@ button:active {
         font-size: 16px;
         padding: 10px 20px;
     }
+
+    .nav-button {
+        font-size: 50px;
+        position: absolute;
+        background-color: transparent;
+        top: 0;
+        right: 0;
+        border: 0px solid black;
+    }
+
+    .opennav-button {
+        font-size: 50px;
+        position: absolute;
+        background-color: transparent;
+        top: 0;
+        right: 0;
+        border: 0px solid black;
+    }
 }
+
+/*matematika*/
 
 mn,
 mi {
     font-family: 'Poppins', sans-serif;
 }
-/* textarea styly */
+
+/* textarea */
 
 textarea {
     border-radius: 10px;
@@ -324,6 +306,7 @@ textarea {
     /* Zabrání uživateli měnit velikost */
     padding: 0.5rem;
 }
+
 textarea:focus {
     border: 2px solid #220b00;
     outline: none;
@@ -391,6 +374,27 @@ button {
     color: #6e2300;
     font-size: 0.875rem;
     font-family: "Poppins", sans-serif;
+
+}
+
+.scroll-to-top {
+    visibility: visible;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .scroll-to-top {
+        visibility: hidden;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
 
 .scroll-to-top {
@@ -441,11 +445,5 @@ button {
     .scroll-to-top.hidden {
         visibility: hidden; /* Stále viditelné po dobu animace */
         opacity: 0;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .static-text {
-        visibility: hidden;
     }
 }

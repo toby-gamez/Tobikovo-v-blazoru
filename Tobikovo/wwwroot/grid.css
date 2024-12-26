@@ -1,8 +1,11 @@
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Čtyři sloupce */
-    grid-gap: 20px; /* Mezery mezi položkami */
-    list-style: none; /* Odstranění odrážek */
+    grid-template-columns: repeat(4, 1fr);
+    /* Čtyři sloupce */
+    grid-gap: 20px;
+    /* Mezery mezi položkami */
+    list-style: none;
+    /* Odstranění odrážek */
     padding: 0;
     margin: 0;
 }
@@ -19,10 +22,8 @@
     border: 4px solid transparent;
     /* Rezervace místa pro rámeček */
     transition: transform 0.2s ease, border 0.2s ease;
-    /* Animace */
     overflow: hidden;
-    /* Zajištění, že obsah nepřeteče */
-    position: relative;
+
 }
 
 .grid-item a {
@@ -37,6 +38,7 @@
     height: 100%;
     /* Roztažení odkazu na celou výšku položky */
     text-decoration: none;
+    z-index: 1000;
 }
 
 .grid-item:hover {
@@ -56,6 +58,7 @@
     /* Velikost textu */
     text-align: center;
     font-size: 1.3rem;
+
 }
 
 @media screen and (max-width: 600px) {
@@ -67,7 +70,7 @@
         padding: 0;
         margin: 0;
         align-items: center;
-        
+
     }
 
     .grid-item {
@@ -76,19 +79,9 @@
         border-radius: 10%;
         border: 4px solid transparent;
         overflow: hidden;
-        position: relative;
         align-content: center;
     }
 
-
-
-    .grid {
-        align-items: center;
-    }
-
-    .grid-item {
-        align-content: center;
-    }
 
     .grid-item a {
         display: flex;
@@ -101,10 +94,14 @@
         height: 12.5rem;
         text-decoration: none;
         margin: 0;
+
+        /* Odstranění podtržení */
+        /* Barva textu */
     }
 
     .grid-item:hover {
         transform: scale(1.05);
+        /* Zvýšení vizuální velikosti */
     }
 
 

@@ -14,22 +14,6 @@
             <div class="loading-bar"></div>
         </div>
         <article>
-            <div class="mobile-nav">
-                <p><a class="mobile-nav" href="home">Domů</a></p>
-                <hr class="mobile-nav">
-                <p><a class="mobile-nav" href="mluvnice">Mluvnice</a></p>
-                <p><a class="mobile-nav" href="literatura">Literatura</a></p>
-                <p><a class="mobile-nav" href="sloh">Sloh</a></p>
-                <p><a class="mobile-nav" href="hudebka">Hudební výchova</a></p>
-                <p><a class="mobile-nav" href="matematika">Matematika</a></p>
-                <p><a class="mobile-nav" href="chemie">Chemie</a></p>
-                <p><a class="mobile-nav" href="fyzika">Fyzika</a></p>
-                <hr class="mobile-nav">
-                <p><a class="mobile-nav" href="about">O mně</a></p>
-                <p><a class="mobile-nav" href="nazor">Vaše zpětná vazba</a></p>
-                <p><a class="mobile-nav" href="changelog">Deník změn</a></p>
-                <span class="navtext">24w51b</span>
-            </div>
             @Body
         </article>
         <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
@@ -101,6 +85,27 @@
     function scrollToTop() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleButton = document.querySelector('.navbar-toggler');
+        const closeButton = document.querySelector('.close-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('show');
+            document.body.style.overflow = mobileMenu.classList.contains('show') ? 'hidden' : '';
+        }
+
+        toggleButton.addEventListener('click', toggleMenu);
+        closeButton.addEventListener('click', toggleMenu);
+
+// Zavření menu při kliknutí na odkaz
+        const menuLinks = mobileMenu.querySelectorAll('.nav-link');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    });
+
+
 </script>
-<script src="Buttons.js"></script>
 

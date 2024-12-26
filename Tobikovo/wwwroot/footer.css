@@ -3,25 +3,30 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+    margin-top: auto;
 }
 
 .footer-content {
     text-decoration: none;
     border-radius: 10px;
-    transition: background-color 0.3s ease;
     width: 100px;
     margin-left: auto;
     margin-right: auto;
     padding: 3px 7px 0;
+    transition: all 0.3s ease;
 }
 
 .footer-content:hover {
     background-color: #ff9c66;
+    transform: translateX(5px);
 }
 
 @media only screen and (max-width: 600px) {
 
     .footer-content {
-        margin-left: 0rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

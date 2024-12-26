@@ -1,52 +1,217 @@
-﻿<style>
-</style>
+﻿<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav>
 
-<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="nav">
-        <a href="home"><img src="images/white-logo.png" width="75px" alt="Logo"></a>
-    
-            <NavLink class="nav-link" href="home" Match="NavLinkMatch.All">
-            <a href="home">Domů</a>
-            </NavLink>
-                <hr>
+        <link href="libs/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <!-- Mobilní hlavička -->
+        <div class="mobile-header">
+            <div class="logo">
+                <a href="home">
+                    <img src="images/white-logo.png" width="150px" alt="">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
 
-            <NavLink class="nav-link" href="mluvnice">
-			<a href="mluvnice">Mluvnice</a>
-            </NavLink>
+        <!-- Mobilní menu -->
+        <div class="mobile-menu">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link navHo" href="home">
+                        <div class="nav-link-content">
+                            <i class="bi bi-house-door"></i>
+                            <span>Domů</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link navMl" href="mluvnice">
+                        <div class="nav-link-content">
+                            <i class="bi bi-journal-text"></i>
+                            <span>Mluvnice</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navLi" href="literatura">
+                        <div class="nav-link-content">
+                            <i class="bi bi-book"></i>
+                            <span>Literatura</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navSl" href="sloh">
+                        <div class="nav-link-content">
+                            <i class="bi bi-pen"></i>
+                            <span>Sloh</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navHu" href="hudebni-vychova">
+                        <div class="nav-link-content">
+                            <i class="bi bi-music-note"></i>
+                            <span>Hudba</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navMa" href="matematika">
+                        <div class="nav-link-content">
+                            <i class="bi bi-calculator"></i>
+                            <span>Matematika</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navCh" href="chemie">
+                        <div class="nav-link-content">
+                            <i class="bi bi-balloon"></i>
+                            <span>Chemie</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navFy" href="fyzika">
+                        <div class="nav-link-content">
+                            <i class="bi bi-gear"></i>
+                            <span>Fyzika</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item" style="padding-top: 3rem">
+                    <a class="nav-link navAb" href="about">
+                        <div class="nav-link-content">
+                            <i class="bi bi-info-circle"></i>
+                            <span>O mně</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navNa" href="nazor">
+                        <div class="nav-link-content">
+                            <i class="bi bi-question-circle"></i>
+                            <span>Zpětná vazba</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navCha" href="changelog">
+                        <div class="nav-link-content">
+                            <i class="bi bi-file-text"></i>
+                            <span>Deník změn</span>
+                        </div>
+                    </a>
+                </li>
+                <div class="version-info">24w51c</div>
+                <li class="nav-item" style="padding-top: 3rem">
+                    <a class="nav-link" href="#">
+                        <div class="nav-link-content">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-            <NavLink class="nav-link" href="literatura">
-			<a href="literatura">Literatura</a>
-            </NavLink>
-
-            <NavLink class="nav-link" href="sloh">
-            <a href="sloh">Sloh</a>
-            </NavLink>
-        <NavLink class="nav-link" href="hudebni-vychova">
-            <a href="hudebni-vychova">Hudební výchova</a>
-        </NavLink>
-        <NavLink class="nav-link" href="matematika">
-            <a href="matematika">Matematika</a>
-        </NavLink>
-        <NavLink class="nav-link" href="chemie">
-            <a href="chemie">Chemie</a>
-        </NavLink>
-        <NavLink class="nav-link" href="chemie">
-            <a href="fyzika">Fyzika</a>
-        </NavLink>
-        <hr>
-
-        <NavLink class="nav-link" href="about">
-            <a href="about">O mně</a>
-        </NavLink>
-        <NavLink class="nav-link" href="nazor">
-            <a href="nazor">Vaše zpětná vazba</a>
-        </NavLink>
-        <NavLink class="nav-link" href="nazor">
-            <a href="changelog">Deník změn</a>
-        </NavLink>
-        <NavLink>
-            <span class="navtext">24w51b</span>
-        </NavLink>
+        <!-- Desktop sidebar -->
+        <div id="MyNavBar">
+            <a href="home" class="navImg" style="margin-left: auto; margin-right: auto">
+                <img src="images/white-logo.png" width="150px" alt="">
+            </a>
+            <ul class="nav flex-column w-100">
+                <li class="nav-item">
+                    <a class="nav-link navHo" href="home">
+                        <div class="nav-link-content">
+                            <i class="bi bi-house-door"></i>
+                            <span>Domů</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link navMl" href="mluvnice">
+                        <div class="nav-link-content">
+                            <i class="bi bi-journal-text"></i>
+                            <span>Mluvnice</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navLi" href="literatura">
+                        <div class="nav-link-content">
+                            <i class="bi bi-book"></i>
+                            <span>Literatura</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navSl" href="sloh">
+                        <div class="nav-link-content">
+                            <i class="bi bi-pen"></i>
+                            <span>Sloh</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navHu" href="hudebni-vychova">
+                        <div class="nav-link-content">
+                            <i class="bi bi-music-note"></i>
+                            <span>Hudba</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navMa" href="matematika">
+                        <div class="nav-link-content">
+                            <i class="bi bi-calculator"></i>
+                            <span>Matematika</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navCh" href="chemie">
+                        <div class="nav-link-content">
+                            <i class="bi bi-balloon"></i>
+                            <span>Chemie</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navFy" href="fyzika">
+                        <div class="nav-link-content">
+                            <i class="bi bi-gear"></i>
+                            <span>Fyzika</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item" style="padding-top: 3rem">
+                    <a class="nav-link navAb" href="about">
+                        <div class="nav-link-content">
+                            <i class="bi bi-info-circle"></i>
+                            <span>O mně</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navNa" href="nazor">
+                        <div class="nav-link-content">
+                            <i class="bi bi-question-circle"></i>
+                            <span>Zpětná vazba</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navCha" href="changelog">
+                        <div class="nav-link-content">
+                            <i class="bi bi-file-text"></i>
+                            <span>Deník změn</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="version-info">24w51c</div>
+        </div>
     </nav>
 </div>
-
